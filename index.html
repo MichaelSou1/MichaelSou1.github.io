@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>苏瑞涵 | MichaelSou1</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #060a12; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #060a12; }
+    ::-webkit-scrollbar-thumb { background: rgba(56,189,248,0.25); border-radius: 3px; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes spin360 {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+  </style>
+</helmet>
+
+<div style="min-height:100vh; background:#060a12; color:#dde4f0; font-family:'Space Grotesk',sans-serif; overflow-x:hidden; position:relative;">
+
+  <!-- Ambient background -->
+  <div style="position:fixed; inset:0; pointer-events:none; z-index:0;
+    background:
+      radial-gradient(ellipse 100% 55% at 50% -5%, rgba(56,189,248,0.08) 0%, transparent 65%),
+      radial-gradient(ellipse 55% 55% at 88% 92%, rgba(99,102,241,0.07) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 45% at 8% 62%, rgba(56,189,248,0.04) 0%, transparent 50%);">
+  </div>
+  <div style="position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image: radial-gradient(rgba(56,189,248,0.04) 1px, transparent 1px);
+    background-size: 36px 36px;">
+  </div>
+
+  <!-- ── NAV ── -->
+  <nav style="position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(6,10,18,0.82); backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(56,189,248,0.07); padding:0 40px;">
+    <div style="max-width:1120px; margin:0 auto; height:64px; display:flex; align-items:center; justify-content:space-between;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:500; color:#38bdf8; letter-spacing:-0.3px;">&lt;苏瑞涵 /&gt;</span>
+      <div style="display:flex; gap:32px; align-items:center;">
+        <a href="#about" style="font-size:13.5px; color:#8899b8; text-decoration:none;" style-hover="color:#dde4f0">关于我</a>
+        <a href="#research" style="font-size:13.5px; color:#8899b8; text-decoration:none;" style-hover="color:#dde4f0">科研</a>
+        <a href="#projects" style="font-size:13.5px; color:#8899b8; text-decoration:none;" style-hover="color:#dde4f0">项目</a>
+        <a href="#skills" style="font-size:13.5px; color:#8899b8; text-decoration:none;" style-hover="color:#dde4f0">技能</a>
+        <a href="#awards" style="font-size:13.5px; color:#8899b8; text-decoration:none;" style-hover="color:#dde4f0">奖项</a>
+        <a href="#contact" style="font-size:13.5px; font-weight:600; color:#030712; text-decoration:none;
+          background:#38bdf8; padding:8px 20px; border-radius:7px;" style-hover="background:#7dd3fc;">联系我</a>
+        <button id="langToggle" type="button" style="height:34px; min-width:58px; border-radius:7px; border:1px solid rgba(56,189,248,0.26);
+          background:rgba(56,189,248,0.08); color:#38bdf8; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600;
+          cursor:pointer;" title="Switch to English" aria-label="Switch to English">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <div style="position:relative; z-index:1;">
+
+    <!-- ── HERO ── -->
+    <section style="padding:152px 40px 96px; animation:fadeUp 0.75s ease 0.05s both;">
+      <div style="max-width:1120px; margin:0 auto;">
+        <div style="display:grid; grid-template-columns:auto 1fr; gap:68px; align-items:center;">
+
+          <!-- Avatar -->
+          <div style="display:flex; flex-direction:column; align-items:center; gap:18px;">
+            <div style="position:relative; width:164px; height:164px;">
+              <div style="position:absolute; inset:-3px; border-radius:50%;
+                background:conic-gradient(from 0deg, #38bdf8 0%, #6366f1 40%, #38bdf8 70%, #6366f1 100%);
+                animation:spin360 6s linear infinite; opacity:0.7;"></div>
+              <div style="position:absolute; inset:-1px; border-radius:50%; background:#060a12;"></div>
+              <img src="./avatar.png" alt="苏瑞涵头像" style="width:160px; height:160px; position:relative; display:block; border-radius:50%; object-fit:cover; object-position:center 34%; background:#f8fafc;">
+            </div>
+            <!-- Social links -->
+            <div style="display:flex; gap:9px;">
+              <a href="mailto:surh6@mail2.sysu.edu.cn" style="height:32px; padding:0 12px; border-radius:7px; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.18);
+                  display:flex; align-items:center; color:#38bdf8; text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:10.5px;" style-hover="background:rgba(56,189,248,0.2);" title="邮件">✉ Mail</a>
+              <a href="https://github.com/MichaelSou1" target="_blank" style="height:32px; padding:0 12px; border-radius:7px; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.18);
+                  display:flex; align-items:center; color:#38bdf8; text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:10.5px;" style-hover="background:rgba(56,189,248,0.2);">GitHub</a>
+              
+            </div>
+          </div>
+
+          <!-- Bio -->
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8;
+              letter-spacing:2.5px; margin-bottom:18px; opacity:0.85; text-transform:uppercase;">// Hello, World</div>
+            <h1 style="margin:0 0 12px; font-size:72px; font-weight:700; letter-spacing:-3.5px; line-height:1; color:#f0f7ff;">苏瑞涵</h1>
+            <div style="font-size:16px; color:#8899b8; margin-bottom:10px; display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+              <span style="color:#dde4f0; font-weight:500;">大模型应用算法</span>
+              <span style="color:#38bdf8;">·</span>
+              
+              
+              <span>中山大学计算机学院 2027届本科生</span>
+            </div>
+            <div style="max-width:580px; margin:0 0 32px;">
+              <p style="font-size:15px; line-height:1.8; color:#8899b8; margin:0 0 14px;">专注于大语言模型的应用研究与工程实践，在以下方向有独立科研与项目经历：</p>
+              <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px;">
+                <span style="font-size:13px; color:#38bdf8; background:rgba(56,189,248,0.09); border:1px solid rgba(56,189,248,0.22); padding:5px 14px; border-radius:20px; font-weight:500;">VLM 推理与评测</span>
+                <span style="font-size:13px; color:#a78bfa; background:rgba(99,102,241,0.09); border:1px solid rgba(99,102,241,0.22); padding:5px 14px; border-radius:20px; font-weight:500;">Agentic 系统</span>
+                <span style="font-size:13px; color:#34d399; background:rgba(52,211,153,0.08); border:1px solid rgba(52,211,153,0.2); padding:5px 14px; border-radius:20px; font-weight:500;">知识蒸馏</span>
+                <span style="font-size:13px; color:#fbbf24; background:rgba(251,191,36,0.08); border:1px solid rgba(251,191,36,0.2); padding:5px 14px; border-radius:20px; font-weight:500;">RAG</span>
+              </div>
+              <p style="font-size:15px; line-height:1.8; color:#8899b8; margin:0;">寻找<span style="color:#f0f7ff; font-weight:600;">长期实习</span>与 <span style="color:#f0f7ff; font-weight:600;">RA / PhD</span> 机会。</p>
+            </div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+              <a href="mailto:surh6@mail2.sysu.edu.cn" style="display:inline-flex; align-items:center; gap:8px; padding:13px 26px;
+                  background:#38bdf8; color:#030712; font-weight:600; font-size:14px;
+                  border-radius:8px; text-decoration:none;" style-hover="background:#7dd3fc;">发送邮件</a>
+              <a href="#research" style="display:inline-flex; align-items:center; gap:8px; padding:13px 26px;
+                  background:rgba(56,189,248,0.08); color:#38bdf8; font-weight:500; font-size:14px;
+                  border-radius:8px; text-decoration:none; border:1px solid rgba(56,189,248,0.22);" style-hover="background:rgba(56,189,248,0.16);">查看科研 →</a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section id="about" style="padding:72px 40px; animation:fadeUp 0.75s ease 0.1s both;">
+      <div style="max-width:1120px; margin:0 auto;">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:40px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">01.</span>
+          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;">关于我</h2>
+          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+
+          <!-- Education -->
+          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.12); border-radius:14px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#38bdf8; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px;">Education</div>
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+              <div style="font-size:17px; font-weight:700; color:#f0f7ff;">中山大学</div>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#8899b8; white-space:nowrap;">2023.09 – 2027.06</span>
+            </div>
+            <div style="font-size:13.5px; color:#8899b8; line-height:1.7;">985 / 双一流 · 计算机学院<br>计算机科学与技术 · 本科</div>
+          </div>
+
+          <!-- Research Interests -->
+          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.12); border-radius:14px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#38bdf8; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px;">Research Interests</div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span style="font-size:13px; color:#8899b8; background:rgba(255,255,255,0.04); padding:5px 13px; border-radius:20px; border:1px solid rgba(255,255,255,0.07);">VLM Reasoning &amp; Evaluation</span>
+              <span style="font-size:13px; color:#8899b8; background:rgba(255,255,255,0.04); padding:5px 13px; border-radius:20px; border:1px solid rgba(255,255,255,0.07);">Agentic Systems</span>
+              <span style="font-size:13px; color:#8899b8; background:rgba(255,255,255,0.04); padding:5px 13px; border-radius:20px; border:1px solid rgba(255,255,255,0.07);">Knowledge Distillation</span>
+              <span style="font-size:13px; color:#8899b8; background:rgba(255,255,255,0.04); padding:5px 13px; border-radius:20px; border:1px solid rgba(255,255,255,0.07);">RAG &amp; Retrieval</span>
+            </div>
+          </div>
+
+          <!-- 兴趣爱好 -->
+          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(99,102,241,0.18); border-radius:14px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#a78bfa; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px;">Interests</div>
+            <div style="display:flex; gap:20px; flex-wrap:wrap;">
+              <span style="font-size:13.5px; color:#8899b8;">🏋️ 健身</span>
+              <span style="font-size:13.5px; color:#8899b8;">📖 刷技术博客</span>
+              <span style="font-size:13.5px; color:#8899b8;">🎬 看美剧</span>
+            </div>
+          </div>
+
+          <!-- 英语能力 -->
+          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(52,211,153,0.15); border-radius:14px;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+              <div style="width:7px; height:7px; border-radius:50%; background:#34d399;"></div>
+              <span style="font-size:13px; font-weight:600; color:#dde4f0;">英语能力</span>
+            </div>
+            <p style="margin:0; font-size:13.5px; line-height:1.75; color:#8899b8;">CET-6 <span style="color:#34d399; font-family:'JetBrains Mono',monospace;">651 / 710</span>，可无障碍研读英文文献。</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RESEARCH ── -->
+    <section id="research" style="padding:72px 40px; animation:fadeUp 0.75s ease 0.15s both;">
+      <div style="max-width:1120px; margin:0 auto;">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:40px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">02.</span>
+          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;">科研经历</h2>
+          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
+          <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#475569; white-space:nowrap;">独立完成 · 技术报告</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:20px;">
+
+          <!-- Research 1 -->
+          <div style="padding:30px 32px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.12); border-radius:14px; transition:border-color 0.2s, box-shadow 0.2s;" style-hover="border-color:rgba(56,189,248,0.32); box-shadow:0 8px 32px rgba(56,189,248,0.07);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
+              <div>
+                <h3 style="margin:0 0 6px; font-size:17px; font-weight:600; color:#f0f7ff; font-style:italic;">Reading, Not Reasoning</h3>
+                <div style="font-size:13.5px; color:#8899b8;">内化式 Agentic 视觉推理的因果忠实性审计</div>
+              </div>
+              <a href="https://github.com/MichaelSou1/reading-not-reasoning" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#38bdf8; text-decoration:none;
+                  padding:6px 14px; border:1px solid rgba(56,189,248,0.25); border-radius:6px; white-space:nowrap;" style-hover="background:rgba(56,189,248,0.1);">GitHub ↗</a>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-bottom:18px;">
+              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#38bdf8; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;">背景</div>
+                <p style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">CoT 监督微调将 Agentic 视觉推理压进单次前向 VLM，但准确率提升是否真正内化了推理能力？</p>
+              </div>
+              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#38bdf8; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;">方法</div>
+                <p style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">Lanham 式因果干预——篡改 CoT 中间量，对比格式对照，强制模型作答并追踪答案来源。</p>
+              </div>
+              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(56,189,248,0.1);">
+                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#38bdf8; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;">核心结论</div>
+                <p style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">CoT 蒸馏稳定提升准确率（<span style="color:#38bdf8; font-family:'JetBrains Mono',monospace;">ChartQA +6.5pp</span>），但思维链<strong style="color:#f0f7ff;">不承载因果</strong>——模型在读图而非推理。</p>
+              </div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:7px;">
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">CoT Distillation</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">Causal Intervention</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">VLM Evaluation</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">Bootstrap Statistics</span>
+            </div>
+          </div>
+
+          <!-- Research 2 -->
+          <div style="padding:30px 32px; background:rgba(11,18,30,0.9); border:1px solid rgba(99,102,241,0.15); border-radius:14px; transition:border-color 0.2s, box-shadow 0.2s;" style-hover="border-color:rgba(99,102,241,0.38); box-shadow:0 8px 32px rgba(99,102,241,0.07);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
+              <div>
+                <h3 style="margin:0 0 6px; font-size:17px; font-weight:600; color:#f0f7ff; font-style:italic;">It's the Elicitation, Not the Eyes</h3>
+                <div style="font-size:13.5px; color:#8899b8;">VLM 作为质检 Critic 的感知 vs 表达归因</div>
+              </div>
+              <a href="https://github.com/MichaelSou1/slide-examiner" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#a78bfa; text-decoration:none;
+                  padding:6px 14px; border:1px solid rgba(99,102,241,0.28); border-radius:6px; white-space:nowrap;" style-hover="background:rgba(99,102,241,0.1);">GitHub ↗</a>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-bottom:18px;">
+              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#a78bfa; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;">背景</div>
+                <p style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">VLM 常作为 Slide/文档 Agent 的质检 Critic，却频繁放过文字溢出边框缺陷——感知失败还是表达失败？</p>
+              </div>
+              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#a78bfa; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;">方法</div>
+                <p style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">以无损几何 oracle 为归因基准；对"格式抑制"类，冻结模型仅改 elicitation 测能否恢复检测。</p>
+              </div>
+              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(99,102,241,0.15);">
+                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#a78bfa; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;">核心结论</div>
+                <p style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">覆盖率 <span style="color:#a78bfa; font-family:'JetBrains Mono',monospace;">2/9 → 8/9</span>（balanced acc. 0.86），跨 6 个 VLM 中 4 个复现，问题在表达而非感知。</p>
+              </div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:7px;">
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 10px; border-radius:4px;">VLM Attribution</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 10px; border-radius:4px;">Elicitation</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 10px; border-radius:4px;">Geometry Oracle</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 10px; border-radius:4px;">DocReward Audit</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects" style="padding:72px 40px; animation:fadeUp 0.75s ease 0.2s both;">
+      <div style="max-width:1120px; margin:0 auto;">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:40px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">03.</span>
+          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;">项目经历</h2>
+          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+
+          <!-- Project 1: Mr-Big-Eye -->
+          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:14px; display:flex; flex-direction:column; gap:14px; transition:border-color 0.2s, transform 0.2s, box-shadow 0.2s;" style-hover="border-color:rgba(56,189,248,0.35); transform:translateY(-4px); box-shadow:0 14px 36px rgba(56,189,248,0.08);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#475569; margin-bottom:7px;">2026.04 – 2026.05</div>
+                <h3 style="margin:0 0 5px; font-size:16px; font-weight:600; color:#f0f7ff;">Mr-Big-Eye</h3>
+                <div style="font-size:13px; color:#8899b8;">长视频音画问答 Agent 系统</div>
+              </div>
+              <a href="https://github.com/MichaelSou1/Mr-Big-Eye" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8899b8; text-decoration:none;
+                  padding:4px 11px; border:1px solid rgba(255,255,255,0.08); border-radius:5px; white-space:nowrap;" style-hover="color:#38bdf8; border-color:rgba(56,189,248,0.3);">GitHub ↗</a>
+            </div>
+            <p style="margin:0; font-size:13.5px; line-height:1.7; color:#8899b8;">离线四路索引（BGE-M3 / SigLIP2 / FunASR / RapidOCR）+ 14 工具 LangGraph 状态机，每句回答绑定 [FRAME]/[TRANSCRIPT]/[SLIDE] 溯源。</p>
+            <div style="padding:12px 16px; background:rgba(56,189,248,0.05); border-radius:8px; border-left:2px solid #38bdf8;">
+              <span style="font-size:12.5px; color:#8899b8;">50 题评测集 pass rate </span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#38bdf8;">0.55 → 0.90</span>
+              <span style="font-size:12.5px; color:#8899b8;">，judge 均分 </span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#38bdf8;">2.95 → 4.00</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:auto;">
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 9px; border-radius:4px;">LangGraph</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 9px; border-radius:4px;">BGE-M3</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 9px; border-radius:4px;">SigLIP2</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 9px; border-radius:4px;">FunASR</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 9px; border-radius:4px;">RRF</span>
+            </div>
+          </div>
+
+          <!-- Project 2: Mr-Big-Eye Distillation -->
+          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:14px; display:flex; flex-direction:column; gap:14px; transition:border-color 0.2s, transform 0.2s, box-shadow 0.2s;" style-hover="border-color:rgba(99,102,241,0.4); transform:translateY(-4px); box-shadow:0 14px 36px rgba(99,102,241,0.08);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#475569; margin-bottom:7px;">2026.05 – 2026.06</div>
+                <h3 style="margin:0 0 5px; font-size:16px; font-weight:600; color:#f0f7ff;">Mr-Big-Eye · 编排策略蒸馏</h3>
+                <div style="font-size:13px; color:#8899b8;">强教师工具调用能力蒸馏进 7B</div>
+              </div>
+              <a href="https://github.com/MichaelSou1/Mr-Big-Eye/tree/distillation" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8899b8; text-decoration:none;
+                  padding:4px 11px; border:1px solid rgba(255,255,255,0.08); border-radius:5px; white-space:nowrap;" style-hover="color:#a78bfa; border-color:rgba(99,102,241,0.3);">GitHub ↗</a>
+            </div>
+            <p style="margin:0; font-size:13.5px; line-height:1.7; color:#8899b8;">行为克隆教师轨迹（QLoRA r32/α64 微调 Qwen2.5-7B），按视频维度切分防泄漏；对照实验证明扩量无效，瓶颈在数据难度。</p>
+            <div style="padding:12px 16px; background:rgba(99,102,241,0.05); border-radius:8px; border-left:2px solid #6366f1;">
+              <span style="font-size:12.5px; color:#8899b8;">hard 集（48题）pass rate </span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#a78bfa;">0.562 → 0.708</span>
+              <span style="font-size:12.5px; color:#8899b8;">（+14.6pp）</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:auto;">
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 9px; border-radius:4px;">QLoRA</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 9px; border-radius:4px;">Qwen2.5-7B</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 9px; border-radius:4px;">Knowledge Distillation</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 9px; border-radius:4px;">PEFT</span>
+            </div>
+          </div>
+
+          <!-- Project 3: Wellness-Copilot -->
+          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:14px; display:flex; flex-direction:column; gap:14px; transition:border-color 0.2s, transform 0.2s, box-shadow 0.2s;" style-hover="border-color:rgba(52,211,153,0.38); transform:translateY(-4px); box-shadow:0 14px 36px rgba(52,211,153,0.07);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#475569; margin-bottom:7px;">2026.03 – 2026.05</div>
+                <h3 style="margin:0 0 5px; font-size:16px; font-weight:600; color:#f0f7ff;">Wellness-Copilot</h3>
+                <div style="font-size:13px; color:#8899b8;">多智能体健康副驾与评测驱动迭代</div>
+              </div>
+              <a href="https://github.com/MichaelSou1/wellness-copilot" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8899b8; text-decoration:none;
+                  padding:4px 11px; border:1px solid rgba(255,255,255,0.08); border-radius:5px; white-space:nowrap;" style-hover="color:#34d399; border-color:rgba(52,211,153,0.3);">GitHub ↗</a>
+            </div>
+            <p style="margin:0; font-size:13.5px; line-height:1.7; color:#8899b8;">LangGraph 7节点主链路，ReAct 父 Agent 编排训练/营养/心理/医学/分析 5 类专家；FAISS 情景记忆 + BGE-M3+BM25 混合 RAG；评测先行驱动架构决策。</p>
+            <div style="padding:12px 16px; background:rgba(52,211,153,0.05); border-radius:8px; border-left:2px solid #34d399;">
+              <span style="font-size:12.5px; color:#8899b8;">端到端 </span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#34d399;">4.64/5</span>
+              <span style="font-size:12.5px; color:#8899b8;">，安全 </span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#34d399;">4.98/5</span>
+              <span style="font-size:12.5px; color:#8899b8;">，273/273 断言通过</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:auto;">
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:3px 9px; border-radius:4px;">LangGraph</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:3px 9px; border-radius:4px;">Multi-Agent</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:3px 9px; border-radius:4px;">RAG</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:3px 9px; border-radius:4px;">FAISS</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:3px 9px; border-radius:4px;">BGE-Reranker</span>
+            </div>
+          </div>
+
+          <!-- Project 4: 产线军师 -->
+          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:14px; display:flex; flex-direction:column; gap:14px; transition:border-color 0.2s, transform 0.2s, box-shadow 0.2s;" style-hover="border-color:rgba(251,191,36,0.35); transform:translateY(-4px); box-shadow:0 14px 36px rgba(251,191,36,0.07);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#475569; margin-bottom:7px;">2026.03 – 2026.06 · 校企合作</div>
+                <h3 style="margin:0 0 5px; font-size:16px; font-weight:600; color:#f0f7ff;">产线军师</h3>
+                <div style="font-size:13px; color:#8899b8;">工业数据自然语言查询 Data Agent</div>
+              </div>
+              <a href="https://cms-docs.shengyc.com/cms/prodia/" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8899b8; text-decoration:none;
+                  padding:4px 11px; border:1px solid rgba(255,255,255,0.08); border-radius:5px; white-space:nowrap;" style-hover="color:#fbbf24; border-color:rgba(251,191,36,0.3);">产品 ↗</a>
+            </div>
+            <p style="margin:0; font-size:13.5px; line-height:1.7; color:#8899b8;">三段式管线（意图理解→schema 映射→模板精确填充）经 MCP 接入现场数据源；私有化部署 Qwen3/GLM/DeepSeek 共 9 模型，自建三层 50 题评测集量化选型。</p>
+            <div style="padding:12px 16px; background:rgba(251,191,36,0.05); border-radius:8px; border-left:2px solid #fbbf24;">
+              <span style="font-size:12.5px; color:#8899b8;">意图识别准确率 </span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#fbbf24;">92.0%</span>
+              <span style="font-size:12.5px; color:#8899b8;">，选型结论决定团队后续技术路线</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:auto;">
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#fbbf24; background:rgba(251,191,36,0.08); padding:3px 9px; border-radius:4px;">vLLM</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#fbbf24; background:rgba(251,191,36,0.08); padding:3px 9px; border-radius:4px;">SGLang</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#fbbf24; background:rgba(251,191,36,0.08); padding:3px 9px; border-radius:4px;">MCP</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#fbbf24; background:rgba(251,191,36,0.08); padding:3px 9px; border-radius:4px;">NL2SQL</span>
+              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#fbbf24; background:rgba(251,191,36,0.08); padding:3px 9px; border-radius:4px;">RAG</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills" style="padding:72px 40px; animation:fadeUp 0.75s ease 0.25s both;">
+      <div style="max-width:1120px; margin:0 auto;">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:40px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">04.</span>
+          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;">技能栈</h2>
+          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+
+          <div style="padding:22px 24px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:12px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#38bdf8; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px;">Languages</div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:13.5px; color:#dde4f0;">Python</span>
+                <div style="display:flex; gap:4px;">
+                  <div style="width:7px; height:7px; border-radius:50%; background:#38bdf8;"></div>
+                  <div style="width:7px; height:7px; border-radius:50%; background:#38bdf8;"></div>
+                  <div style="width:7px; height:7px; border-radius:50%; background:#38bdf8;"></div>
+                  <div style="width:7px; height:7px; border-radius:50%; background:#38bdf8;"></div>
+                  <div style="width:7px; height:7px; border-radius:50%; background:rgba(56,189,248,0.18);"></div>
+                </div>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:13.5px; color:#dde4f0;">C++</span>
+                <div style="display:flex; gap:4px;">
+                  <div style="width:7px; height:7px; border-radius:50%; background:#38bdf8;"></div>
+                  <div style="width:7px; height:7px; border-radius:50%; background:#38bdf8;"></div>
+                  <div style="width:7px; height:7px; border-radius:50%; background:#38bdf8;"></div>
+                  <div style="width:7px; height:7px; border-radius:50%; background:rgba(56,189,248,0.18);"></div>
+                  <div style="width:7px; height:7px; border-radius:50%; background:rgba(56,189,248,0.18);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding:22px 24px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:12px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#a78bfa; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px;">Agent &amp; LLM</div>
+            <div style="display:flex; flex-wrap:wrap; gap:7px;">
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.1); padding:4px 10px; border-radius:5px;">LangChain</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.1); padding:4px 10px; border-radius:5px;">LangGraph</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.1); padding:4px 10px; border-radius:5px;">ReAct</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.1); padding:4px 10px; border-radius:5px;">MCP</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.1); padding:4px 10px; border-radius:5px;">Tool Calling</span>
+            </div>
+          </div>
+
+          <div style="padding:22px 24px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:12px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#34d399; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px;">RAG &amp; Retrieval</div>
+            <div style="display:flex; flex-wrap:wrap; gap:7px;">
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:4px 10px; border-radius:5px;">BGE-M3</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:4px 10px; border-radius:5px;">FAISS</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:4px 10px; border-radius:5px;">BM25</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:4px 10px; border-radius:5px;">BGE-Reranker</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:4px 10px; border-radius:5px;">RRF</span>
+            </div>
+          </div>
+
+          <div style="padding:22px 24px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:12px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#fbbf24; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px;">Training &amp; Inference</div>
+            <div style="display:flex; flex-wrap:wrap; gap:7px;">
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#fbbf24; background:rgba(251,191,36,0.08); padding:4px 10px; border-radius:5px;">QLoRA / PEFT</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#fbbf24; background:rgba(251,191,36,0.08); padding:4px 10px; border-radius:5px;">vLLM</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#fbbf24; background:rgba(251,191,36,0.08); padding:4px 10px; border-radius:5px;">SGLang</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#fbbf24; background:rgba(251,191,36,0.08); padding:4px 10px; border-radius:5px;">PyTorch</span>
+              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#fbbf24; background:rgba(251,191,36,0.08); padding:4px 10px; border-radius:5px;">SigLIP2</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── AWARDS ── -->
+    <section id="awards" style="padding:72px 40px; animation:fadeUp 0.75s ease 0.3s both;">
+      <div style="max-width:1120px; margin:0 auto;">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:40px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">05.</span>
+          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;">荣誉奖项</h2>
+          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+
+          <div style="display:flex; align-items:center; gap:20px; padding:20px 24px;
+            background:rgba(11,18,30,0.9); border:1px solid rgba(251,191,36,0.18); border-radius:12px;">
+            <div style="width:42px; height:42px; border-radius:10px; background:rgba(251,191,36,0.1); flex-shrink:0;
+              display:flex; align-items:center; justify-content:center; font-size:18px;">🥇</div>
+            <div>
+              <div style="font-size:15px; font-weight:600; color:#dde4f0; margin-bottom:3px;">全国大学生数学竞赛</div>
+              <div style="font-size:13px; color:#8899b8;">一等奖 <span style="font-family:'JetBrains Mono',monospace; color:#fbbf24;">第 7 名 / 15842 人</span></div>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:20px; padding:20px 24px;
+            background:rgba(11,18,30,0.9); border:1px solid rgba(99,102,241,0.15); border-radius:12px;">
+            <div style="width:42px; height:42px; border-radius:10px; background:rgba(99,102,241,0.1); flex-shrink:0;
+              display:flex; align-items:center; justify-content:center; font-size:18px;">🥈</div>
+            <div>
+              <div style="font-size:15px; font-weight:600; color:#dde4f0; margin-bottom:3px;">全国大学生数学建模竞赛</div>
+              <div style="font-size:13px; color:#8899b8;">二等奖 <span style="font-family:'JetBrains Mono',monospace; color:#a78bfa;">前 15%</span></div>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:20px; padding:20px 24px;
+            background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:12px;">
+            <div style="width:42px; height:42px; border-radius:10px; background:rgba(56,189,248,0.08); flex-shrink:0;
+              display:flex; align-items:center; justify-content:center; font-size:18px;">🎓</div>
+            <div>
+              <div style="font-size:15px; font-weight:600; color:#dde4f0; margin-bottom:3px;">中山大学 校二等奖学金</div>
+              <div style="font-size:13px; color:#8899b8;">综合表现优秀</div>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:20px; padding:20px 24px;
+            background:rgba(11,18,30,0.9); border:1px solid rgba(52,211,153,0.12); border-radius:12px;">
+            <div style="width:42px; height:42px; border-radius:10px; background:rgba(52,211,153,0.08); flex-shrink:0;
+              display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; color:#34d399;">EN</div>
+            <div>
+              <div style="font-size:15px; font-weight:600; color:#dde4f0; margin-bottom:3px;">CET-6 大学英语六级</div>
+              <div style="font-size:13px; color:#8899b8;"><span style="font-family:'JetBrains Mono',monospace; color:#34d399;">651 / 710</span>，可无障碍研读英文文献</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact" style="padding:72px 40px 120px; animation:fadeUp 0.75s ease 0.35s both;">
+      <div style="max-width:1120px; margin:0 auto;">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:48px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">06.</span>
+          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;">联系方式</h2>
+          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+          <div>
+            <h3 style="margin:0 0 16px; font-size:38px; font-weight:700; color:#f0f7ff; letter-spacing:-2px; line-height:1.15;">期待合作<br>与交流</h3>
+            <p style="margin:0 0 32px; font-size:15px; line-height:1.85; color:#8899b8;">无论是实习机会、科研合作（RA/PhD），还是单纯的技术交流，都欢迎随时联系。</p>
+            <a href="mailto:surh6@mail2.sysu.edu.cn" style="display:inline-flex; align-items:center; gap:10px; padding:13px 30px;
+                background:#38bdf8; color:#030712; font-weight:600; font-size:14px;
+                border-radius:8px; text-decoration:none;" style-hover="background:#7dd3fc;">发送邮件 ✉</a>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:11px;">
+            <div style="display:flex; align-items:center; gap:18px; padding:17px 22px;
+              background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:10px;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#38bdf8; min-width:60px; letter-spacing:1.5px; text-transform:uppercase;">Email</span>
+              <span style="font-size:13.5px; color:#dde4f0; font-family:'JetBrains Mono',monospace;"><a href="mailto:surh6@mail2.sysu.edu.cn" style="color:#dde4f0; text-decoration:none;" style-hover="color:#38bdf8;">surh6@mail2.sysu.edu.cn</a></span>
+            </div>
+            <div style="display:flex; align-items:center; gap:18px; padding:17px 22px;
+              background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:10px;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#38bdf8; min-width:60px; letter-spacing:1.5px; text-transform:uppercase;">GitHub</span>
+              <a href="https://github.com/MichaelSou1" target="_blank" style="font-size:13.5px; color:#dde4f0; font-family:'JetBrains Mono',monospace; text-decoration:none;" style-hover="color:#38bdf8;">github.com/MichaelSou1</a>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding:22px 40px; border-top:1px solid rgba(56,189,248,0.06); text-align:center;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#334155;">
+        © 2026 苏瑞涵 &nbsp;·&nbsp; michaelsou1.github.io
+      </span>
+    </footer>
+
+  </div>
+</div>
+</x-dc>
+<script>
+  (function () {
+    const textTranslations = {
+      "关于我": "About",
+      "科研": "Research",
+      "项目": "Projects",
+      "技能": "Skills",
+      "奖项": "Awards",
+      "联系我": "Contact",
+      "大模型应用算法": "Applied LLM Algorithms",
+      "中山大学计算机学院 2027届本科生": "Computer Science Undergraduate, Sun Yat-sen University, Class of 2027",
+      "专注于大语言模型的应用研究与工程实践，在以下方向有独立科研与项目经历：": "I focus on applied research and engineering practice around large language models, with independent research and project experience in:",
+      "VLM 推理与评测": "VLM Reasoning & Evaluation",
+      "Agentic 系统": "Agentic Systems",
+      "知识蒸馏": "Knowledge Distillation",
+      "寻找": "Seeking ",
+      "长期实习": "long-term internships",
+      "与": " and",
+      "机会。": " opportunities.",
+      "发送邮件": "Email Me",
+      "查看科研 →": "View Research →",
+      "中山大学": "Sun Yat-sen University",
+      "985 / 双一流 · 计算机学院": "985 / Double First-Class · School of Computer Science",
+      "计算机科学与技术 · 本科": "Computer Science and Technology · B.Eng.",
+      "🏋️ 健身": "🏋️ Fitness",
+      "📖 刷技术博客": "📖 Tech Blogs",
+      "🎬 看美剧": "🎬 TV Series",
+      "英语能力": "English Proficiency",
+      "，可无障碍研读英文文献。": ", comfortable reading English research papers.",
+      "科研经历": "Research",
+      "独立完成 · 技术报告": "Independent Work · Technical Reports",
+      "内化式 Agentic 视觉推理的因果忠实性审计": "Causal faithfulness audit of internalized agentic visual reasoning",
+      "背景": "Context",
+      "方法": "Method",
+      "核心结论": "Key Finding",
+      "CoT 监督微调将 Agentic 视觉推理压进单次前向 VLM，但准确率提升是否真正内化了推理能力？": "CoT supervised fine-tuning compresses agentic visual reasoning into a single-forward VLM. Does the accuracy gain reflect genuinely internalized reasoning?",
+      "Lanham 式因果干预——篡改 CoT 中间量，对比格式对照，强制模型作答并追踪答案来源。": "Lanham-style causal interventions: perturb CoT intermediates, compare format controls, force answers, and trace where answers come from.",
+      "CoT 蒸馏稳定提升准确率（": "CoT distillation reliably improves accuracy (",
+      "），但思维链": "), but the chain of thought ",
+      "不承载因果": "does not carry causality",
+      "——模型在读图而非推理。": ": the model is reading charts rather than reasoning.",
+      "VLM 作为质检 Critic 的感知 vs 表达归因": "Perception vs. articulation attribution for VLMs as quality-control critics",
+      "VLM 常作为 Slide/文档 Agent 的质检 Critic，却频繁放过文字溢出边框缺陷——感知失败还是表达失败？": "VLMs are often used as quality-control critics for slide/document agents, yet they frequently miss text-overflow defects. Is the failure in perception or articulation?",
+      "以无损几何 oracle 为归因基准；对\"格式抑制\"类，冻结模型仅改 elicitation 测能否恢复检测。": "Use a lossless geometry oracle as the attribution baseline; for format-suppression cases, keep the model fixed and change only elicitation to test whether detection recovers.",
+      "覆盖率": "Coverage",
+      "（balanced acc. 0.86），跨 6 个 VLM 中 4 个复现，问题在表达而非感知。": " (balanced acc. 0.86), reproduced on 4 of 6 VLMs; the issue is articulation, not perception.",
+      "项目经历": "Projects",
+      "长视频音画问答 Agent 系统": "Long-video audiovisual QA agent system",
+      "离线四路索引（BGE-M3 / SigLIP2 / FunASR / RapidOCR）+ 14 工具 LangGraph 状态机，每句回答绑定 [FRAME]/[TRANSCRIPT]/[SLIDE] 溯源。": "Offline four-channel indexes (BGE-M3 / SigLIP2 / FunASR / RapidOCR) + a 14-tool LangGraph state machine; every answer sentence is grounded with [FRAME]/[TRANSCRIPT]/[SLIDE] provenance.",
+      "50 题评测集 pass rate": "50-question eval pass rate",
+      "，judge 均分": ", average judge score",
+      "Mr-Big-Eye · 编排策略蒸馏": "Mr-Big-Eye · Orchestration Policy Distillation",
+      "强教师工具调用能力蒸馏进 7B": "Distilling a strong teacher's tool-use policy into a 7B model",
+      "行为克隆教师轨迹（QLoRA r32/α64 微调 Qwen2.5-7B），按视频维度切分防泄漏；对照实验证明扩量无效，瓶颈在数据难度。": "Behavior-cloned teacher trajectories (QLoRA r32/alpha64 fine-tuning Qwen2.5-7B), split by video to prevent leakage; ablations show scale alone does not help, with difficulty as the bottleneck.",
+      "hard 集（48题）pass rate": "Hard set (48 questions) pass rate",
+      "（+14.6pp）": " (+14.6pp)",
+      "多智能体健康副驾与评测驱动迭代": "Multi-agent wellness copilot with evaluation-driven iteration",
+      "LangGraph 7节点主链路，ReAct 父 Agent 编排训练/营养/心理/医学/分析 5 类专家；FAISS 情景记忆 + BGE-M3+BM25 混合 RAG；评测先行驱动架构决策。": "A 7-node LangGraph main pipeline, with a ReAct parent agent coordinating training, nutrition, mental health, medical, and analytics experts; FAISS episodic memory + BGE-M3/BM25 hybrid RAG; evaluation-first design drove architecture decisions.",
+      "端到端": "End-to-end",
+      "，安全": ", safety",
+      "，273/273 断言通过": ", 273/273 assertions passed",
+      "2026.03 – 2026.06 · 校企合作": "2026.03 – 2026.06 · University-Industry Collaboration",
+      "产线军师": "Production-Line Strategist",
+      "工业数据自然语言查询 Data Agent": "Industrial data natural-language query agent",
+      "产品 ↗": "Product ↗",
+      "三段式管线（意图理解→schema 映射→模板精确填充）经 MCP 接入现场数据源；私有化部署 Qwen3/GLM/DeepSeek 共 9 模型，自建三层 50 题评测集量化选型。": "Three-stage pipeline (intent understanding -> schema mapping -> precise template filling) connected to field data through MCP; privately deployed nine Qwen3/GLM/DeepSeek models and built a three-tier 50-question evaluation set for model selection.",
+      "意图识别准确率": "Intent recognition accuracy",
+      "，选型结论决定团队后续技术路线": ", with selection results shaping the team's technical roadmap",
+      "技能栈": "Skills",
+      "荣誉奖项": "Awards",
+      "全国大学生数学竞赛": "Chinese Mathematics Competitions for College Students",
+      "一等奖": "First Prize",
+      "第 7 名 / 15842 人": "Ranked 7th / 15,842",
+      "全国大学生数学建模竞赛": "Contemporary Undergraduate Mathematical Contest in Modeling",
+      "二等奖": "Second Prize",
+      "前 15%": "Top 15%",
+      "中山大学 校二等奖学金": "Sun Yat-sen University Second-Class Scholarship",
+      "综合表现优秀": "Outstanding overall performance",
+      "CET-6 大学英语六级": "CET-6 College English Test",
+      "，可无障碍研读英文文献": ", comfortable reading English research papers",
+      "联系方式": "Contact",
+      "期待合作": "Open to",
+      "与交流": "Collaboration",
+      "无论是实习机会、科研合作（RA/PhD），还是单纯的技术交流，都欢迎随时联系。": "I am open to internships, research collaborations (RA/PhD), and technical conversations.",
+      "发送邮件 ✉": "Email Me ✉"
+    };
+
+    const attrTranslations = {
+      "邮件": "Email"
+    };
+
+    const textNodes = [];
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        if (node.parentElement && node.parentElement.closest("script, style")) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+
+    let currentNode;
+    while ((currentNode = walker.nextNode())) {
+      textNodes.push({ node: currentNode, zh: currentNode.nodeValue });
+    }
+
+    const attrNodes = Array.from(document.querySelectorAll("[placeholder], [title], [aria-label]")).map((node) => ({
+      node,
+      placeholder: node.getAttribute("placeholder"),
+      title: node.getAttribute("title"),
+      ariaLabel: node.getAttribute("aria-label")
+    }));
+
+    function translateText(original, lang) {
+      if (lang === "zh") return original;
+      const trimmed = original.trim();
+      if (!trimmed) return original;
+      const exact = textTranslations[trimmed];
+      let translated = exact ? original.replace(trimmed, exact) : original;
+      translated = translated.replace(/苏瑞涵/g, "Ruihan Su");
+      return translated;
+    }
+
+    function translateAttr(value, lang) {
+      if (!value || lang === "zh") return value;
+      return attrTranslations[value] || value;
+    }
+
+    function applyLanguage(lang) {
+      const isEnglish = lang === "en";
+      document.documentElement.lang = isEnglish ? "en" : "zh-CN";
+      document.title = isEnglish ? "Ruihan Su | MichaelSou1" : "苏瑞涵 | MichaelSou1";
+
+      textNodes.forEach(({ node, zh }) => {
+        node.nodeValue = translateText(zh, lang);
+      });
+
+      attrNodes.forEach(({ node, placeholder, title, ariaLabel }) => {
+        if (placeholder !== null) node.setAttribute("placeholder", translateAttr(placeholder, lang));
+        if (title !== null) node.setAttribute("title", translateAttr(title, lang));
+        if (ariaLabel !== null) node.setAttribute("aria-label", translateAttr(ariaLabel, lang));
+      });
+
+      const toggle = document.getElementById("langToggle");
+      if (toggle) {
+        toggle.textContent = isEnglish ? "中文" : "EN";
+        toggle.setAttribute("aria-label", isEnglish ? "Switch to Chinese" : "Switch to English");
+        toggle.setAttribute("title", isEnglish ? "Switch to Chinese" : "Switch to English");
+        toggle.style.background = isEnglish ? "#38bdf8" : "rgba(56,189,248,0.08)";
+        toggle.style.color = isEnglish ? "#030712" : "#38bdf8";
+      }
+
+      try {
+        localStorage.setItem("siteLanguage", lang);
+      } catch (error) {
+        // Some local preview modes disable storage; language switching should still work.
+      }
+    }
+
+    let savedLang = "zh";
+    try {
+      savedLang = localStorage.getItem("siteLanguage") || "zh";
+    } catch (error) {
+      savedLang = "zh";
+    }
+
+    const requestedLang = new URLSearchParams(window.location.search).get("lang");
+    const initialLang = requestedLang === "en" || requestedLang === "zh" ? requestedLang : savedLang;
+    applyLanguage(initialLang === "en" ? "en" : "zh");
+
+    const toggle = document.getElementById("langToggle");
+    if (toggle) {
+      toggle.addEventListener("click", () => {
+        const nextLang = document.documentElement.lang === "en" ? "zh" : "en";
+        applyLanguage(nextLang);
+      });
+    }
+  })();
+</script>
+</body>
+</html>
