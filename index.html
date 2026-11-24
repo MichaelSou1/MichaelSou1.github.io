@@ -3,499 +3,483 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ruihan Su | MichaelSou1</title>
-<style>body.en [lang="zh"], body:not(.en) [lang="en"] { display:none !important; }</style>
-<script src="./support.js"></script>
-</head>
-<body class="en">
-<x-dc>
-<helmet>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: #060a12; }
-    body.en [lang="zh"], body:not(.en) [lang="en"] { display:none !important; }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: #060a12; }
-    ::-webkit-scrollbar-thumb { background: rgba(56,189,248,0.25); border-radius: 3px; }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(28px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes spin360 {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
-    }
-  </style>
-</helmet>
-
-<div style="min-height:100vh; background:#060a12; color:#dde4f0; font-family:'Space Grotesk',sans-serif; overflow-x:hidden; position:relative;">
-
-  <!-- Ambient background -->
-  <div style="position:fixed; inset:0; pointer-events:none; z-index:0;
-    background:
-      radial-gradient(ellipse 100% 55% at 50% -5%, rgba(56,189,248,0.08) 0%, transparent 65%),
-      radial-gradient(ellipse 55% 55% at 88% 92%, rgba(99,102,241,0.07) 0%, transparent 55%),
-      radial-gradient(ellipse 40% 45% at 8% 62%, rgba(56,189,248,0.04) 0%, transparent 50%);">
-  </div>
-  <div style="position:fixed; inset:0; pointer-events:none; z-index:0;
-    background-image: radial-gradient(rgba(56,189,248,0.04) 1px, transparent 1px);
-    background-size: 36px 36px;">
-  </div>
-
-  <!-- ── NAV ── -->
-  <nav style="position:fixed; top:0; left:0; right:0; z-index:100;
-    background:rgba(6,10,18,0.82); backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(56,189,248,0.07); padding:0 40px;">
-    <div style="max-width:1120px; margin:0 auto; height:64px; display:flex; align-items:center; justify-content:space-between;">
-      <span style="font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:500; color:#38bdf8; letter-spacing:-0.3px;"><span lang="zh">&lt;苏瑞涵 /&gt;</span><span lang="en">&lt;Ruihan Su /&gt;</span></span>
-      <div style="display:flex; gap:32px; align-items:center;">
-        <a href="#about" style="font-size:13.5px; color:#8899b8; text-decoration:none;" style-hover="color:#dde4f0"><span lang="zh">关于我</span><span lang="en">About</span></a>
-        <a href="#research" style="font-size:13.5px; color:#8899b8; text-decoration:none;" style-hover="color:#dde4f0"><span lang="zh">科研</span><span lang="en">Research</span></a>
-        <a href="#projects" style="font-size:13.5px; color:#8899b8; text-decoration:none;" style-hover="color:#dde4f0"><span lang="zh">项目</span><span lang="en">Projects</span></a>
-        <a href="#internship" style="font-size:13.5px; color:#8899b8; text-decoration:none;" style-hover="color:#dde4f0"><span lang="zh">实习</span><span lang="en">Internship</span></a>
-        <a href="#awards" style="font-size:13.5px; color:#8899b8; text-decoration:none;" style-hover="color:#dde4f0"><span lang="zh">奖项</span><span lang="en">Awards</span></a>
-        <a href="#contact" style="font-size:13.5px; font-weight:600; color:#030712; text-decoration:none;
-          background:#38bdf8; padding:8px 20px; border-radius:7px;" style-hover="background:#7dd3fc;"><span lang="zh">联系我</span><span lang="en">Contact</span></a>
-        <button id="langToggle" type="button" style="height:34px; min-width:58px; border-radius:7px; border:1px solid rgba(56,189,248,0.26);
-          background:rgba(56,189,248,0.08); color:#38bdf8; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600;
-          cursor:pointer;" title="Switch to English" aria-label="Switch to English">EN</button>
-      </div>
-    </div>
-  </nav>
-
-  <div style="position:relative; z-index:1;">
-
-    <!-- ── HERO ── -->
-    <section style="padding:152px 40px 96px; animation:fadeUp 0.75s ease 0.05s both;">
-      <div style="max-width:1120px; margin:0 auto;">
-        <div style="display:grid; grid-template-columns:auto 1fr; gap:68px; align-items:center;">
-
-          <!-- Avatar -->
-          <div style="display:flex; flex-direction:column; align-items:center; gap:18px;">
-            <div style="position:relative; width:164px; height:164px;">
-              <div style="position:absolute; inset:-3px; border-radius:50%;
-                background:conic-gradient(from 0deg, #38bdf8 0%, #6366f1 40%, #38bdf8 70%, #6366f1 100%);
-                animation:spin360 6s linear infinite; opacity:0.7;"></div>
-              <div style="position:absolute; inset:-1px; border-radius:50%; background:#060a12;"></div>
-              <img src="./avatar.png" alt="苏瑞涵头像" style="width:160px; height:160px; position:relative; display:block; border-radius:50%; object-fit:cover; object-position:center 34%; background:#f8fafc;">
-            </div>
-            <!-- Social links -->
-            <div style="display:flex; gap:9px;">
-              <a href="mailto:surh6@mail2.sysu.edu.cn" style="height:32px; padding:0 12px; border-radius:7px; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.18);
-                  display:flex; align-items:center; color:#38bdf8; text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:10.5px;" style-hover="background:rgba(56,189,248,0.2);" title="邮件">✉ Mail</a>
-              <a href="https://github.com/MichaelSou1" target="_blank" style="height:32px; padding:0 12px; border-radius:7px; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.18);
-                  display:flex; align-items:center; color:#38bdf8; text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:10.5px;" style-hover="background:rgba(56,189,248,0.2);">GitHub</a>
-
-            </div>
-          </div>
-
-          <!-- Bio -->
-          <div>
-            <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8;
-              letter-spacing:2.5px; margin-bottom:18px; opacity:0.85; text-transform:uppercase;">// Hello, World</div>
-            <h1 style="margin:0 0 12px; font-size:72px; font-weight:700; letter-spacing:-3.5px; line-height:1; color:#f0f7ff;"><span lang="zh">苏瑞涵</span><span lang="en">Ruihan Su</span></h1>
-            <div style="font-size:16px; color:#8899b8; margin-bottom:10px; display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-              <span style="color:#dde4f0; font-weight:500;"><span lang="zh">多模态感知 · 推理 · 生成</span><span lang="en">Multimodal Perception · Reasoning · Generation</span></span>
-              <span style="color:#38bdf8;">·</span>
-
-
-              <span><span lang="zh">中山大学计算机学院 2027届本科生</span><span lang="en">CS Undergraduate, Sun Yat-sen University, Class of 2027</span></span>
-            </div>
-            <div style="max-width:580px; margin:0 0 32px;">
-              <p lang="zh" style="font-size:15px; line-height:1.8; color:#8899b8; margin:0 0 14px;">专注于多模态感知、推理与生成的研究，在以下方向有独立科研经历：</p>
-              <p lang="en" style="font-size:15px; line-height:1.8; color:#8899b8; margin:0 0 14px;">I focus on research in multimodal perception, reasoning, and generation, with independent research experience in:</p>
-              <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px;">
-                <span style="font-size:13px; color:#38bdf8; background:rgba(56,189,248,0.09); border:1px solid rgba(56,189,248,0.22); padding:5px 14px; border-radius:20px; font-weight:500;"><span lang="zh">多模态感知</span><span lang="en">Multimodal Perception</span></span>
-                <span style="font-size:13px; color:#a78bfa; background:rgba(99,102,241,0.09); border:1px solid rgba(99,102,241,0.22); padding:5px 14px; border-radius:20px; font-weight:500;"><span lang="zh">推理与生成</span><span lang="en">Reasoning &amp; Generation</span></span>
-                <span style="font-size:13px; color:#34d399; background:rgba(52,211,153,0.08); border:1px solid rgba(52,211,153,0.2); padding:5px 14px; border-radius:20px; font-weight:500;"><span lang="zh">世界模型</span><span lang="en">World Models</span></span>
-              </div>
-              <p lang="zh" style="font-size:15px; line-height:1.8; color:#8899b8; margin:0;">寻找 <span style="color:#f0f7ff; font-weight:600;">PhD</span> 机会。</p>
-              <p lang="en" style="font-size:15px; line-height:1.8; color:#8899b8; margin:0;">Seeking <span style="color:#f0f7ff; font-weight:600;">PhD</span> opportunities.</p>
-            </div>
-            <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
-              <a href="mailto:surh6@mail2.sysu.edu.cn" style="display:inline-flex; align-items:center; gap:8px; padding:13px 26px;
-                  background:#38bdf8; color:#030712; font-weight:600; font-size:14px;
-                  border-radius:8px; text-decoration:none;" style-hover="background:#7dd3fc;"><span lang="zh">发送邮件</span><span lang="en">Email Me</span></a>
-              <a href="#research" style="display:inline-flex; align-items:center; gap:8px; padding:13px 26px;
-                  background:rgba(56,189,248,0.08); color:#38bdf8; font-weight:500; font-size:14px;
-                  border-radius:8px; text-decoration:none; border:1px solid rgba(56,189,248,0.22);" style-hover="background:rgba(56,189,248,0.16);"><span lang="zh">查看科研 →</span><span lang="en">View Research →</span></a>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── ABOUT ── -->
-    <section id="about" style="padding:72px 40px; animation:fadeUp 0.75s ease 0.1s both;">
-      <div style="max-width:1120px; margin:0 auto;">
-        <div style="display:flex; align-items:center; gap:16px; margin-bottom:40px;">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">01.</span>
-          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;"><span lang="zh">关于我</span><span lang="en">About</span></h2>
-          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
-
-          <!-- Education -->
-          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.12); border-radius:14px;">
-            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#38bdf8; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px;">Education</div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-              <div style="font-size:17px; font-weight:700; color:#f0f7ff;"><span lang="zh">中山大学</span><span lang="en">Sun Yat-sen University</span></div>
-              <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#8899b8; white-space:nowrap;">2023.09 – 2027.06</span>
-            </div>
-            <div lang="zh" style="font-size:13.5px; color:#8899b8; line-height:1.7;">985 / 双一流 · 计算机学院<br>计算机科学与技术 · 本科</div>
-            <div lang="en" style="font-size:13.5px; color:#8899b8; line-height:1.7;">985 / Double First-Class · School of CS<br>Computer Science &amp; Technology · B.Eng.</div>
-          </div>
-
-          <!-- Research Interests -->
-          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.12); border-radius:14px;">
-            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#38bdf8; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px;">Research Interests</div>
-            <div style="display:flex; flex-wrap:wrap; gap:8px;">
-              <span style="font-size:13px; color:#8899b8; background:rgba(255,255,255,0.04); padding:5px 13px; border-radius:20px; border:1px solid rgba(255,255,255,0.07);">Multimodal Perception</span>
-              <span style="font-size:13px; color:#8899b8; background:rgba(255,255,255,0.04); padding:5px 13px; border-radius:20px; border:1px solid rgba(255,255,255,0.07);">Reasoning &amp; Generation</span>
-              <span style="font-size:13px; color:#8899b8; background:rgba(255,255,255,0.04); padding:5px 13px; border-radius:20px; border:1px solid rgba(255,255,255,0.07);">World Models</span>
-            </div>
-          </div>
-
-          <!-- 兴趣爱好 -->
-          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(99,102,241,0.18); border-radius:14px;">
-            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#a78bfa; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px;">Interests</div>
-            <div style="display:flex; gap:20px; flex-wrap:wrap;">
-              <span style="font-size:13.5px; color:#8899b8;"><span lang="zh">🏋️ 健身</span><span lang="en">🏋️ Fitness</span></span>
-              <span style="font-size:13.5px; color:#8899b8;"><span lang="zh">📖 刷技术博客</span><span lang="en">📖 Tech Blogs</span></span>
-              <span style="font-size:13.5px; color:#8899b8;"><span lang="zh">🎬 看美剧</span><span lang="en">🎬 TV Series</span></span>
-            </div>
-          </div>
-
-          <!-- 英语能力 -->
-          <div style="padding:26px 28px; background:rgba(11,18,30,0.9); border:1px solid rgba(52,211,153,0.15); border-radius:14px;">
-            <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-              <div style="width:7px; height:7px; border-radius:50%; background:#34d399;"></div>
-              <span style="font-size:13px; font-weight:600; color:#dde4f0;"><span lang="zh">英语能力</span><span lang="en">English Proficiency</span></span>
-            </div>
-            <p lang="zh" style="margin:0; font-size:13.5px; line-height:1.75; color:#8899b8;">CET-6 <span style="color:#34d399; font-family:'JetBrains Mono',monospace;">651 / 710</span>，可无障碍研读英文文献。</p>
-            <p lang="en" style="margin:0; font-size:13.5px; line-height:1.75; color:#8899b8;">CET-6 <span style="color:#34d399; font-family:'JetBrains Mono',monospace;">651 / 710</span>, comfortable reading English research papers.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── RESEARCH ── -->
-    <section id="research" style="padding:72px 40px; animation:fadeUp 0.75s ease 0.15s both;">
-      <div style="max-width:1120px; margin:0 auto;">
-        <div style="display:flex; align-items:center; gap:16px; margin-bottom:40px;">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">02.</span>
-          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;"><span lang="zh">科研经历</span><span lang="en">Research</span></h2>
-          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
-          <span style="font-size:12px; font-family:'JetBrains Mono',monospace; color:#475569; white-space:nowrap;"><span lang="zh">独立完成 · 技术报告</span><span lang="en">Independent Work · Technical Reports</span></span>
-        </div>
-        <div style="display:flex; flex-direction:column; gap:20px;">
-
-          <!-- Research 1 -->
-          <div style="padding:30px 32px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.12); border-radius:14px; transition:border-color 0.2s, box-shadow 0.2s;" style-hover="border-color:rgba(56,189,248,0.32); box-shadow:0 8px 32px rgba(56,189,248,0.07);">
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
-              <div>
-                <h3 style="margin:0 0 6px; font-size:17px; font-weight:600; color:#f0f7ff; font-style:italic;">MoPE-JEPA</h3>
-                <div style="font-size:13.5px; color:#8899b8;"><span lang="zh">面向视频物理世界理解的稀疏专家自监督编码器</span><span lang="en">Sparse MoE self-supervised encoder for video physical world understanding</span></div>
-              </div>
-            </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-bottom:18px;">
-              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#38bdf8; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;"><span lang="zh">背景</span><span lang="en">Context</span></div>
-                <p lang="zh" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">通用 VLM 对视频中的物理规律（动力学、属性、空间关系）理解有限，需要专门的物理视觉编码器来增强感知与推理。</p>
-                <p lang="en" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">General-purpose VLMs have limited understanding of physical laws in video (dynamics, properties, spatial relations), calling for a specialized physics-aware visual encoder.</p>
-              </div>
-              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#38bdf8; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;"><span lang="zh">方法</span><span lang="en">Method</span></div>
-                <p lang="zh" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">在 VideoMAEv2 (ViT-B) 顶部 4 层引入 <span style="color:#38bdf8; font-family:'JetBrains Mono',monospace;">4 专家 top-2</span> MoE + JEPA 自监督预训练；8 层全解冻，双塔注入 Qwen3-VL-2B 后 SFT + GRPO。</p>
-                <p lang="en" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">Introduced <span style="color:#38bdf8; font-family:'JetBrains Mono',monospace;">4-expert top-2</span> MoE in the top 4 layers of VideoMAEv2 (ViT-B) with JEPA self-supervised pre-training; all 8 layers unfrozen, dual-tower injection into Qwen3-VL-2B followed by SFT + GRPO.</p>
-              </div>
-              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(56,189,248,0.1);">
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#38bdf8; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;"><span lang="zh">核心设计</span><span lang="en">Key Design</span></div>
-                <p lang="zh" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">一次路由、四层复用的高效稀疏策略；SIGReg 正则化防止表征坍塌；在 PhysBench 上评测动力学、属性、场景、空间关系四类物理推理。</p>
-                <p lang="en" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">Efficient one-shot routing reused across four layers; SIGReg regularization to prevent representation collapse; evaluated on PhysBench across dynamics, properties, scene, and spatial reasoning.</p>
-              </div>
-            </div>
-            <div style="display:flex; flex-wrap:wrap; gap:7px;">
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">JEPA</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">MoE</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">VideoMAEv2</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">Dual-Tower VLM</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">GRPO</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">PhysBench</span>
-            </div>
-          </div>
-
-          <!-- Research 2 -->
-          <div style="padding:30px 32px; background:rgba(11,18,30,0.9); border:1px solid rgba(99,102,241,0.15); border-radius:14px; transition:border-color 0.2s, box-shadow 0.2s;" style-hover="border-color:rgba(99,102,241,0.38); box-shadow:0 8px 32px rgba(99,102,241,0.07);">
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
-              <div>
-                <h3 style="margin:0 0 6px; font-size:17px; font-weight:600; color:#f0f7ff; font-style:italic;">Reading, Not Reasoning</h3>
-                <div style="font-size:13.5px; color:#8899b8;"><span lang="zh">CoT 蒸馏图表 VLM 的因果忠实性审计</span><span lang="en">Causal faithfulness audit of CoT in distilled chart-and-table VLMs</span></div>
-              </div>
-            </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-bottom:18px;">
-              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#a78bfa; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;"><span lang="zh">背景</span><span lang="en">Context</span></div>
-                <p lang="zh" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">CoT SFT 将多步视觉推理压缩为单次 VLM 前向，准确率提升被解读为"内化了推理"——但 emitted chain 真的承载了计算吗？</p>
-                <p lang="en" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">CoT SFT compresses multi-step visual reasoning into a single VLM forward pass. The accuracy gain is read as internalized reasoning — but does the emitted chain actually carry the computation?</p>
-              </div>
-              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#a78bfa; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;"><span lang="zh">方法</span><span lang="en">Method</span></div>
-                <p lang="zh" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">因果干预：篡改 CoT 中数值中间量（v→2v+7），以 shuffle/local-num 为无目标对照，force-continue 后追踪 snap vs follow 答案来源。</p>
-                <p lang="en" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">Causal intervention: corrupt numeric intermediates in the CoT (v→2v+7), use shuffle/local-num as no-target controls, then force-continue and track snap vs. follow answer sources.</p>
-              </div>
-              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(99,102,241,0.15);">
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#a78bfa; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;"><span lang="zh">核心结论</span><span lang="en">Key Finding</span></div>
-                <p lang="zh" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">CoT SFT 稳定提升准确率（<span style="color:#a78bfa; font-family:'JetBrains Mono',monospace;">ChartQA +6.5pp</span>），但 F≤0、snap≈97%、follow≈1%——思维链<strong style="color:#f0f7ff;">不承载因果</strong>，模型在读图而非推理。</p>
-                <p lang="en" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">CoT SFT reliably improves accuracy (<span style="color:#a78bfa; font-family:'JetBrains Mono',monospace;">ChartQA +6.5pp</span>), but F≤0, snap≈97%, follow≈1% — the chain of thought <strong style="color:#f0f7ff;">does not carry causality</strong>: the model is reading charts rather than reasoning.</p>
-              </div>
-            </div>
-            <div style="display:flex; flex-wrap:wrap; gap:7px;">
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 10px; border-radius:4px;">Causal Intervention</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 10px; border-radius:4px;">CoT Faithfulness</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 10px; border-radius:4px;">VLM Evaluation</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 10px; border-radius:4px;">ChartQA</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#a78bfa; background:rgba(99,102,241,0.09); padding:3px 10px; border-radius:4px;">Bootstrap Statistics</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── PROJECTS ── -->
-    <section id="projects" style="padding:72px 40px; animation:fadeUp 0.75s ease 0.25s both;">
-      <div style="max-width:1120px; margin:0 auto;">
-        <div style="display:flex; align-items:center; gap:16px; margin-bottom:40px;">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">03.</span>
-          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;"><span lang="zh">项目经历</span><span lang="en">Projects</span></h2>
-          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
-        </div>
-        <div style="display:flex; flex-direction:column; gap:20px;">
-
-          <!-- Project: moji-video -->
-          <div style="padding:30px 32px; background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.12); border-radius:14px; transition:border-color 0.2s, box-shadow 0.2s;" style-hover="border-color:rgba(56,189,248,0.32); box-shadow:0 8px 32px rgba(56,189,248,0.07);">
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
-              <div>
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#475569; margin-bottom:7px;">2026.07 – 2026.08</div>
-                <h3 style="margin:0 0 6px; font-size:17px; font-weight:600; color:#f0f7ff;">Moji-Video</h3>
-                <div style="font-size:13.5px; color:#8899b8;"><span lang="zh">基于 Flow-GRPO 的视频生成画面文字准确率优化</span><span lang="en">Optimizing video text rendering accuracy via Flow-GRPO</span></div>
-              </div>
-              <a href="https://github.com/MichaelSou1/moji-video" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#38bdf8; text-decoration:none;
-                  padding:6px 14px; border:1px solid rgba(56,189,248,0.25); border-radius:6px; white-space:nowrap;" style-hover="background:rgba(56,189,248,0.1);">GitHub ↗</a>
-            </div>
-            <p lang="zh" style="margin:0 0 16px; font-size:13.5px; line-height:1.7; color:#8899b8;">针对视频生成模型渲染画面文字准确率低且缺乏可直接优化目标的问题，采用 Flow-GRPO 并将其从图像域迁移至视频域，基于 verl-omni 框架在 Wan2.2-TI2V-5B（50 亿参数）上完成端到端 RLHF 训练与评测。</p>
-            <p lang="en" style="margin:0 0 16px; font-size:13.5px; line-height:1.7; color:#8899b8;">To address video generation models' low text rendering accuracy and the lack of directly optimizable objectives, adopted Flow-GRPO and migrated it from the image domain to the video domain, completing end-to-end RLHF training and evaluation on Wan2.2-TI2V-5B (5B params) with the verl-omni framework.</p>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;">
-              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#38bdf8; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;"><span lang="zh">核心思路</span><span lang="en">Key Idea</span></div>
-                <p lang="zh" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">Flow matching 采样是确定性 ODE，与 GRPO 要求的多次采样随机性存在结构性冲突；通过 ODE-to-SDE 转换引入可控噪声，保持边际分布不变的同时满足组内相对优势估计的前提条件。</p>
-                <p lang="en" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">Flow matching sampling is a deterministic ODE, structurally conflicting with GRPO's requirement for stochastic multi-sampling; ODE-to-SDE conversion introduces controllable noise, preserving the marginal distribution while enabling group relative advantage estimation.</p>
-              </div>
-              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#38bdf8; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;"><span lang="zh">工程实现</span><span lang="en">Engineering</span></div>
-                <p lang="zh" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">设计基于 Qwen3-VL-8B 转写 + Levenshtein 编辑距离的 OCR verifiable reward；独立搭建 FSDP + vLLM-Omni 异步 rollout 多卡训练链路；应用 Denoising Reduction（训练 10 步 / 验证 50 步）控制 rollout 成本。</p>
-                <p lang="en" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">Designed OCR verifiable reward based on Qwen3-VL-8B transcription + Levenshtein edit distance; independently built FSDP + vLLM-Omni async rollout multi-GPU training pipeline; applied Denoising Reduction (10-step training / 50-step validation) to control rollout cost.</p>
-              </div>
-            </div>
-            <div style="display:flex; gap:14px; margin-bottom:18px; flex-wrap:wrap;">
-              <div style="flex:1; min-width:200px; padding:12px 16px; background:rgba(56,189,248,0.05); border-radius:8px; border-left:2px solid #38bdf8;">
-                <span style="font-size:12.5px; color:#8899b8;"><span lang="zh">8 组 paired prompt OCR reward </span><span lang="en">8-pair prompt OCR reward </span></span>
-                <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#38bdf8;">0.586 → 0.716</span>
-                <span style="font-size:12.5px; color:#8899b8;"><span lang="zh">（+13.0pp）</span><span lang="en"> (+13.0pp)</span></span>
-              </div>
-              <div style="flex:1; min-width:200px; padding:12px 16px; background:rgba(56,189,248,0.05); border-radius:8px; border-left:2px solid #38bdf8;">
-                <span style="font-size:12.5px; color:#8899b8;"><span lang="zh">64 行独立验证集 </span><span lang="en">64-sample independent val set </span></span>
-                <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#38bdf8;">0.473 → 0.508</span>
-                <span style="font-size:12.5px; color:#8899b8;"><span lang="zh">（+3.5pp，单调上行）</span><span lang="en"> (+3.5pp, monotonically increasing)</span></span>
-              </div>
-            </div>
-            <div style="display:flex; flex-wrap:wrap; gap:7px;">
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">Flow-GRPO</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">ODE-to-SDE</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">Wan2.2-5B</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">verl-omni</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">OCR Reward</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#38bdf8; background:rgba(56,189,248,0.08); padding:3px 10px; border-radius:4px;">Video Generation</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── INTERNSHIP ── -->
-    <section id="internship" style="padding:72px 40px; animation:fadeUp 0.75s ease 0.3s both;">
-      <div style="max-width:1120px; margin:0 auto;">
-        <div style="display:flex; align-items:center; gap:16px; margin-bottom:40px;">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">04.</span>
-          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;"><span lang="zh">实习经历</span><span lang="en">Internship</span></h2>
-          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
-        </div>
-        <div style="display:flex; flex-direction:column; gap:20px;">
-
-          <!-- Internship: Tele AI -->
-          <div style="padding:30px 32px; background:rgba(11,18,30,0.9); border:1px solid rgba(52,211,153,0.15); border-radius:14px; transition:border-color 0.2s, box-shadow 0.2s;" style-hover="border-color:rgba(52,211,153,0.38); box-shadow:0 8px 32px rgba(52,211,153,0.07);">
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
-              <div>
-                <div style="font-size:14px; font-weight:600; color:#dde4f0; margin-bottom:7px;">Tele AI<span lang="zh" style="font-size:12.5px; font-weight:400; color:#8899b8;">（中电信人工智能公司）</span></div>
-                <h3 style="margin:0 0 6px; font-size:17px; font-weight:600; color:#f0f7ff;"><span lang="zh">视觉理解算法</span><span lang="en">Visual Understanding Algorithm</span></h3>
-                <div style="font-size:13.5px; color:#8899b8;">SPGP / Argus — Slot-Parallel Generative Perception</div>
-              </div>
-            </div>
-            <p lang="zh" style="margin:0 0 16px; font-size:13.5px; line-height:1.7; color:#8899b8;">现有视觉感知模型对多实例场景采用串行自回归预测，存在伪顺序依赖、重复预测与效率瓶颈。设计并实现 Slot-Parallel Generative Perception 架构：实例间并行、实例内 coarse-to-fine 自回归，兼顾生成式建模的灵活性与并行推理效率。</p>
-            <p lang="en" style="margin:0 0 16px; font-size:13.5px; line-height:1.7; color:#8899b8;">Existing visual perception models use serial autoregressive prediction for multi-instance scenes, suffering from spurious ordering dependencies, duplicate predictions, and efficiency bottlenecks. Designed and implemented the Slot-Parallel Generative Perception architecture: parallel across instances, coarse-to-fine autoregressive within each instance, balancing the flexibility of generative modeling with parallel inference efficiency.</p>
-            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-bottom:18px;">
-              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#34d399; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;"><span lang="zh">架构设计</span><span lang="en">Architecture</span></div>
-                <p lang="zh" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">Unified Early-Fusion Transformer 共享图文表示；Global Presence Head 判定 concept 存在性后初始化 N 个并行 Slot，每个 Slot 内部依次自回归预测位置→尺寸→掩码。</p>
-                <p lang="en" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">Unified Early-Fusion Transformer for shared vision-language representation; Global Presence Head determines concept existence and initializes N parallel Slots, each autoregressively predicting coord → size → mask.</p>
-              </div>
-              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(255,255,255,0.05);">
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#34d399; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;"><span lang="zh">关键机制</span><span lang="en">Key Mechanisms</span></div>
-                <p lang="zh" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">FlexAttention 稀疏块实现 Slot 隔离注意力掩码；Hungarian Matching 集合级监督解决 Slot 与 GT 实例的对应关系；Gated Cross-Slot Refinement 选择性跨 Slot 交互。</p>
-                <p lang="en" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">FlexAttention sparse blocks for Slot isolation attention masks; Hungarian Matching set-level supervision for Slot–GT instance assignment; Gated Cross-Slot Refinement for selective inter-Slot interaction.</p>
-              </div>
-              <div style="padding:14px 16px; background:rgba(6,10,18,0.7); border-radius:9px; border:1px solid rgba(52,211,153,0.12);">
-                <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:#34d399; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;"><span lang="zh">当前进展</span><span lang="en">Status</span></div>
-                <p lang="zh" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">模型已投入大规模预训练；架构原生支持扩展至 Slot-level Pass@K 与 GRPO/RL 后训练等生成式增强策略。</p>
-                <p lang="en" style="margin:0; font-size:13px; line-height:1.65; color:#8899b8;">Model deployed for large-scale pre-training; architecture natively supports extension to Slot-level Pass@K and GRPO/RL post-training strategies.</p>
-              </div>
-            </div>
-            <div style="display:flex; flex-wrap:wrap; gap:7px;">
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:3px 10px; border-radius:4px;">Slot-Parallel</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:3px 10px; border-radius:4px;">Generative Perception</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:3px 10px; border-radius:4px;">FlexAttention</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:3px 10px; border-radius:4px;">Hungarian Matching</span>
-              <span style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(52,211,153,0.08); padding:3px 10px; border-radius:4px;">Open-Vocabulary</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── AWARDS ── -->
-    <section id="awards" style="padding:72px 40px; animation:fadeUp 0.75s ease 0.32s both;">
-      <div style="max-width:1120px; margin:0 auto;">
-        <div style="display:flex; align-items:center; gap:16px; margin-bottom:40px;">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">05.</span>
-          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;"><span lang="zh">荣誉奖项</span><span lang="en">Awards</span></h2>
-          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-
-          <div style="display:flex; align-items:center; gap:20px; padding:20px 24px;
-            background:rgba(11,18,30,0.9); border:1px solid rgba(251,191,36,0.18); border-radius:12px;">
-            <div style="width:42px; height:42px; border-radius:10px; background:rgba(251,191,36,0.1); flex-shrink:0;
-              display:flex; align-items:center; justify-content:center; font-size:18px;">🥇</div>
-            <div>
-              <div style="font-size:15px; font-weight:600; color:#dde4f0; margin-bottom:3px;"><span lang="zh">全国大学生数学竞赛</span><span lang="en">Chinese Mathematics Competitions</span></div>
-              <div style="font-size:13px; color:#8899b8;"><span lang="zh">一等奖</span><span lang="en">First Prize</span> <span style="font-family:'JetBrains Mono',monospace; color:#fbbf24;"><span lang="zh">第 7 名 / 15842 人</span><span lang="en">Ranked 7th / 15,842</span></span></div>
-            </div>
-          </div>
-
-          <div style="display:flex; align-items:center; gap:20px; padding:20px 24px;
-            background:rgba(11,18,30,0.9); border:1px solid rgba(99,102,241,0.15); border-radius:12px;">
-            <div style="width:42px; height:42px; border-radius:10px; background:rgba(99,102,241,0.1); flex-shrink:0;
-              display:flex; align-items:center; justify-content:center; font-size:18px;">🥈</div>
-            <div>
-              <div style="font-size:15px; font-weight:600; color:#dde4f0; margin-bottom:3px;"><span lang="zh">全国大学生数学建模竞赛</span><span lang="en">Mathematical Contest in Modeling</span></div>
-              <div style="font-size:13px; color:#8899b8;"><span lang="zh">二等奖</span><span lang="en">Second Prize</span> <span style="font-family:'JetBrains Mono',monospace; color:#a78bfa;"><span lang="zh">前 15%</span><span lang="en">Top 15%</span></span></div>
-            </div>
-          </div>
-
-          <div style="display:flex; align-items:center; gap:20px; padding:20px 24px;
-            background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:12px;">
-            <div style="width:42px; height:42px; border-radius:10px; background:rgba(56,189,248,0.08); flex-shrink:0;
-              display:flex; align-items:center; justify-content:center; font-size:18px;">🎓</div>
-            <div>
-              <div style="font-size:15px; font-weight:600; color:#dde4f0; margin-bottom:3px;"><span lang="zh">中山大学 校二等奖学金</span><span lang="en">SYSU Second-Class Scholarship</span></div>
-              <div style="font-size:13px; color:#8899b8;"><span lang="zh">综合表现优秀</span><span lang="en">Outstanding overall performance</span></div>
-            </div>
-          </div>
-
-          <div style="display:flex; align-items:center; gap:20px; padding:20px 24px;
-            background:rgba(11,18,30,0.9); border:1px solid rgba(52,211,153,0.12); border-radius:12px;">
-            <div style="width:42px; height:42px; border-radius:10px; background:rgba(52,211,153,0.08); flex-shrink:0;
-              display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; color:#34d399;">EN</div>
-            <div>
-              <div style="font-size:15px; font-weight:600; color:#dde4f0; margin-bottom:3px;"><span lang="zh">CET-6 大学英语六级</span><span lang="en">CET-6 College English Test</span></div>
-              <div style="font-size:13px; color:#8899b8;"><span style="font-family:'JetBrains Mono',monospace; color:#34d399;">651 / 710</span><span lang="zh">，可无障碍研读英文文献</span><span lang="en">, comfortable reading English papers</span></div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CONTACT ── -->
-    <section id="contact" style="padding:72px 40px 120px; animation:fadeUp 0.75s ease 0.35s both;">
-      <div style="max-width:1120px; margin:0 auto;">
-        <div style="display:flex; align-items:center; gap:16px; margin-bottom:48px;">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#38bdf8; letter-spacing:2px;">06.</span>
-          <h2 style="margin:0; font-size:26px; font-weight:700; color:#f0f7ff; letter-spacing:-0.6px;"><span lang="zh">联系方式</span><span lang="en">Contact</span></h2>
-          <div style="flex:1; height:1px; background:rgba(56,189,248,0.1);"></div>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
-          <div>
-            <h3 lang="zh" style="margin:0 0 16px; font-size:38px; font-weight:700; color:#f0f7ff; letter-spacing:-2px; line-height:1.15;">期待合作<br>与交流</h3>
-            <h3 lang="en" style="margin:0 0 16px; font-size:38px; font-weight:700; color:#f0f7ff; letter-spacing:-2px; line-height:1.15;">Open to<br>Collaboration</h3>
-            <p lang="zh" style="margin:0 0 32px; font-size:15px; line-height:1.85; color:#8899b8;">无论是科研合作、PhD 机会，还是单纯的技术交流，都欢迎随时联系。</p>
-            <p lang="en" style="margin:0 0 32px; font-size:15px; line-height:1.85; color:#8899b8;">I am open to research collaborations, PhD opportunities, and technical conversations.</p>
-            <a href="mailto:surh6@mail2.sysu.edu.cn" style="display:inline-flex; align-items:center; gap:10px; padding:13px 30px;
-                background:#38bdf8; color:#030712; font-weight:600; font-size:14px;
-                border-radius:8px; text-decoration:none;" style-hover="background:#7dd3fc;"><span lang="zh">发送邮件 ✉</span><span lang="en">Email Me ✉</span></a>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:11px;">
-            <div style="display:flex; align-items:center; gap:18px; padding:17px 22px;
-              background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:10px;">
-              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#38bdf8; min-width:60px; letter-spacing:1.5px; text-transform:uppercase;">Email</span>
-              <span style="font-size:13.5px; color:#dde4f0; font-family:'JetBrains Mono',monospace;"><a href="mailto:surh6@mail2.sysu.edu.cn" style="color:#dde4f0; text-decoration:none;" style-hover="color:#38bdf8;">surh6@mail2.sysu.edu.cn</a></span>
-            </div>
-            <div style="display:flex; align-items:center; gap:18px; padding:17px 22px;
-              background:rgba(11,18,30,0.9); border:1px solid rgba(56,189,248,0.1); border-radius:10px;">
-              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#38bdf8; min-width:60px; letter-spacing:1.5px; text-transform:uppercase;">GitHub</span>
-              <a href="https://github.com/MichaelSou1" target="_blank" style="font-size:13.5px; color:#dde4f0; font-family:'JetBrains Mono',monospace; text-decoration:none;" style-hover="color:#38bdf8;">github.com/MichaelSou1</a>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer style="padding:22px 40px; border-top:1px solid rgba(56,189,248,0.06); text-align:center;">
-      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#334155;">
-        © 2026 <span lang="zh">苏瑞涵</span><span lang="en">Ruihan Su</span> &nbsp;·&nbsp; michaelsou1.github.io
-      </span>
-    </footer>
-
-  </div>
-</div>
-</x-dc>
+<title>Ruihan Su · 苏瑞涵</title>
+<meta name="description" content="Ruihan Su — undergraduate researcher at Sun Yat-sen University working on multimodal understanding, agentic post-training, and world models.">
 <script>
-(function(){
-  var b=document.body,t=document.getElementById('langToggle');
-  function set(en){
-    if(en) b.classList.add('en'); else b.classList.remove('en');
-    document.documentElement.lang=en?'en':'zh-CN';
-    document.title=en?'Ruihan Su | MichaelSou1':'苏瑞涵 | MichaelSou1';
-    if(t){t.textContent=en?'中文':'EN';t.style.background=en?'#38bdf8':'rgba(56,189,248,0.08)';t.style.color=en?'#030712':'#38bdf8';}
-    try{localStorage.setItem('lang',en?'en':'zh');}catch(e){}
+  // Apply saved language before first paint to avoid a flash of the wrong language.
+  (function () {
+    var l = 'en';
+    try { l = localStorage.getItem('lang') || 'en'; } catch (e) {}
+    document.documentElement.setAttribute('data-lang', l);
+    document.documentElement.lang = l === 'zh' ? 'zh-CN' : 'en';
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #EEF0EA;
+    --ink:     #1A2238;
+    --graphite:#545B6B;
+    --tile:    #2340A0;
+    --willow:  #B9C27A;
+    --rule:    #CDD1C6;
+
+    --sans:  "Schibsted Grotesk", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", system-ui, sans-serif;
+    --serif: "Literata", "Songti SC", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+
+    --measure: 38rem;
   }
-  var s='en';try{s=localStorage.getItem('lang')||'en';}catch(e){}
-  set(s!=='zh');
-  if(t)t.addEventListener('click',function(){set(!b.classList.contains('en'));});
-})();
+
+  [data-lang="en"] [lang="zh"],
+  [data-lang="zh"] [lang="en"] { display: none !important; }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    font-optical-sizing: auto;
+  }
+  ::selection { background: var(--willow); color: var(--ink); }
+
+  a { color: var(--tile); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--tile); outline-offset: 3px; border-radius: 2px; }
+
+  h1, h2, h3, h4, nav, button, .sans { font-family: var(--sans); }
+
+  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 2rem; }
+
+  /* ---------- header ---------- */
+  .top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.4rem 0; gap: 1rem;
+  }
+  .top .me { font-family: var(--sans); font-weight: 700; font-size: 1rem; color: var(--ink); text-decoration: none; }
+  .top nav { display: flex; align-items: center; gap: 1.6rem; font-size: 0.9375rem; }
+  .top nav a { color: var(--graphite); text-decoration: none; }
+  .top nav a:hover { color: var(--ink); }
+  .lang {
+    font: 500 0.875rem var(--sans);
+    color: var(--ink); background: transparent;
+    border: 1px solid var(--rule); border-radius: 999px;
+    padding: 0.3rem 0.85rem; cursor: pointer;
+  }
+  .lang:hover { border-color: var(--ink); }
+
+  /* ---------- hero ---------- */
+  .hero {
+    display: grid; grid-template-columns: minmax(0, 1fr) 19rem;
+    gap: 4rem; align-items: start;
+    padding: 4.5rem 0 4rem;
+  }
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 5.25rem);
+    font-weight: 700; line-height: 0.95; letter-spacing: -0.035em;
+  }
+  .hero h1 .alt { display: block; font-weight: 400; font-size: 0.42em; letter-spacing: 0; margin-top: 0.55rem; color: var(--graphite); }
+  .affil { font-family: var(--sans); color: var(--graphite); margin: 1.4rem 0 0; font-size: 1rem; }
+
+  .lines {
+    list-style: none; padding: 0; margin: 2rem 0 0;
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    font-family: var(--sans); font-size: 0.9375rem; font-weight: 500;
+  }
+  .lines li a {
+    display: inline-block; padding: 0.35rem 0.8rem;
+    background: var(--ink); color: var(--paper);
+    text-decoration: none; border-radius: 3px;
+  }
+  .lines li a:hover { background: var(--tile); }
+
+  .bio { max-width: var(--measure); margin-top: 2rem; }
+  .bio p { margin: 0 0 1rem; }
+  .reach { font-family: var(--sans); font-size: 0.9375rem; display: flex; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+
+  /* avatar as a patch grid — the page's one signature moment */
+  .patches {
+    --n: 6;
+    display: grid; grid-template-columns: repeat(var(--n), 1fr);
+    gap: 3px; background: var(--paper);
+    aspect-ratio: 1; width: 100%;
+  }
+  .patches span {
+    background-image: url("images/avatar-casual.webp");
+    background-size: calc(var(--n) * 100%) calc(var(--n) * 100%);
+    animation: patch-in 420ms cubic-bezier(.2,.7,.2,1) both;
+    animation-delay: calc(var(--i) * 22ms + 150ms);
+  }
+  @keyframes patch-in {
+    from { opacity: 0; transform: scale(0.6); }
+    to   { opacity: 1; transform: none; }
+  }
+  .patches-cap { font-family: var(--sans); font-size: 0.8125rem; color: var(--graphite); margin-top: 0.6rem; }
+
+  /* ---------- sections ---------- */
+  section { border-top: 1px solid var(--rule); padding: 3.5rem 0; }
+  section > h2 {
+    margin: 0 0 2.5rem;
+    font-size: 1.75rem; font-weight: 700; letter-spacing: -0.015em;
+  }
+
+  /* margin-label rows: label left, content right */
+  .row {
+    display: grid; grid-template-columns: 13rem minmax(0, 1fr);
+    gap: 2.5rem; padding: 0 0 3rem;
+  }
+  .row:last-child { padding-bottom: 0; }
+  .row > h3 {
+    margin: 0; font-size: 1.0625rem; font-weight: 700; line-height: 1.35;
+    position: sticky; top: 1.5rem; align-self: start;
+  }
+  .row > h3 small { display: block; font-weight: 400; font-size: 0.875rem; color: var(--graphite); margin-top: 0.25rem; }
+  .row > div { max-width: 44rem; }
+
+  /* research entries */
+  .paper { margin: 0 0 2.75rem; }
+  .paper:last-child { margin-bottom: 0; }
+  .paper h4 { margin: 0; font-size: 1.25rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.01em; }
+  .paper .by { margin: 0.35rem 0 0.9rem; font-size: 0.9375rem; color: var(--graphite); }
+  .paper .by em { color: var(--ink); }
+  .paper p { margin: 0 0 0.9rem; max-width: var(--measure); }
+  .paper.brief h4 { font-size: 1.0625rem; }
+
+  ul.results { list-style: none; padding: 0; margin: 0; font-size: 0.96875rem; }
+  ul.results li { position: relative; padding-left: 1.1rem; margin: 0.3rem 0; }
+  ul.results li::before {
+    content: ""; position: absolute; left: 0; top: 0.62em;
+    width: 0.42rem; height: 0.42rem; background: var(--tile);
+  }
+  ul.results b, .paper p b { font-family: var(--sans); font-weight: 700; }
+
+  /* experience */
+  .job p.what { margin: 0 0 0.9rem; max-width: var(--measure); }
+  .job ul { margin: 0; padding-left: 1.1rem; font-size: 0.96875rem; }
+  .job ul li { margin: 0.45rem 0; }
+  .job ul li::marker { color: var(--tile); }
+  .job ul b { font-family: var(--sans); font-weight: 500; }
+
+  /* news */
+  .news { list-style: none; margin: 0; padding: 0; }
+  .news li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding: 0.35rem 0; }
+  .news time { font-family: var(--sans); color: var(--graphite); }
+
+  /* honors */
+  .honors { list-style: none; margin: 0; padding: 0; }
+  .honors li { padding: 0 0 1.1rem; }
+  .honors li b { font-family: var(--sans); font-weight: 700; }
+  .honors li span { display: block; color: var(--graphite); font-size: 0.96875rem; }
+
+  /* beyond research */
+  .beyond { display: grid; grid-template-columns: minmax(0, 1fr) 13rem; gap: 2.5rem; align-items: start; }
+  .beyond p { margin: 0 0 1rem; max-width: var(--measure); }
+  .beyond dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 1.25rem; }
+  .beyond dt { font-family: var(--sans); font-weight: 500; }
+  .beyond dd { margin: 0; color: var(--graphite); }
+  .beyond figure { margin: 0; }
+  .beyond img { width: 100%; height: auto; display: block; border-radius: 3px; }
+  .beyond figcaption { font-family: var(--sans); font-size: 0.8125rem; color: var(--graphite); margin-top: 0.5rem; }
+
+  /* contact */
+  .contact p { max-width: var(--measure); margin: 0 0 1.25rem; }
+  .contact .mail {
+    font-family: var(--sans); font-weight: 700;
+    font-size: clamp(1.35rem, 3.2vw, 2.1rem); letter-spacing: -0.015em;
+    color: var(--ink); text-decoration-color: var(--tile);
+  }
+  .contact .mail:hover { color: var(--tile); }
+  .contact .more { font-family: var(--sans); font-size: 0.9375rem; margin-top: 1rem; }
+
+  footer { border-top: 1px solid var(--rule); padding: 1.5rem 0 2.5rem; font-family: var(--sans); font-size: 0.8125rem; color: var(--graphite); }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 2.5rem; }
+    .hero figure { order: -1; max-width: 13rem; }
+    .row { grid-template-columns: 1fr; gap: 1rem; }
+    .row > h3 { position: static; }
+    #research .row > h3 { color: var(--tile); }
+    .beyond { grid-template-columns: 1fr; }
+    .beyond figure { max-width: 14rem; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 1.25rem; }
+    .top nav .sec { display: none; }
+    section { padding: 2.75rem 0; }
+    .news li { grid-template-columns: 1fr; gap: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .patches span { animation: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <a class="me" href="#top"><span lang="en">Ruihan Su</span><span lang="zh">苏瑞涵</span></a>
+    <nav aria-label="Sections">
+      <a class="sec" href="#research"><span lang="en">Research</span><span lang="zh">研究</span></a>
+      <a class="sec" href="#experience"><span lang="en">Experience</span><span lang="zh">实习</span></a>
+      <a class="sec" href="#honors"><span lang="en">Honors</span><span lang="zh">荣誉</span></a>
+      <a class="sec" href="#contact"><span lang="en">Contact</span><span lang="zh">联系</span></a>
+      <button class="lang" id="lang" type="button" aria-label="Switch language">
+        <span lang="en">中文</span><span lang="zh">English</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>
+          <span lang="en">Ruihan Su<span class="alt">苏瑞涵</span></span>
+          <span lang="zh">苏瑞涵<span class="alt">Ruihan Su</span></span>
+        </h1>
+        <p class="affil">
+          <span lang="en">Undergraduate in Computer Science, Sun Yat-sen University</span>
+          <span lang="zh">中山大学计算机学院 · 计算机科学与技术本科生</span>
+        </p>
+
+        <ul class="lines" aria-label="Research lines">
+          <li><a href="#mu"><span lang="en">Multimodal Understanding</span><span lang="zh">多模态理解</span></a></li>
+          <li><a href="#agentic"><span lang="en">Agentic Post-training</span><span lang="zh">智能体后训练</span></a></li>
+          <li><a href="#wm"><span lang="en">World Model</span><span lang="zh">世界模型</span></a></li>
+        </ul>
+
+        <div class="bio">
+          <p lang="en">I work on multimodal large models along three lines: multimodal understanding (how models form and use visual information internally), agentic post-training (making agents robust and efficient in real interaction), and world models (visual representations that capture physical dynamics). I am currently a research intern on the multimodal foundation model team at Kuaishou, and previously interned with the LLM application team at Meituan.</p>
+          <p lang="zh">我是中山大学计算机学院 2027 届本科生，研究兴趣是多模态大模型，主要关注三个方向：多模态理解（模型内部如何形成并使用视觉信息）、智能体后训练（让 Agent 在真实交互中更稳健、更高效），以及世界模型（让视觉表征捕获物理规律）。我目前在快手多模态基座模型团队实习，此前在美团大模型应用团队实习。</p>
+          <p lang="en">I am open to Ph.D. opportunities and research collaborations. Feel free to reach out.</p>
+          <p lang="zh">欢迎博士项目与科研合作方面的交流，随时联系我。</p>
+        </div>
+
+        <p class="reach">
+          <a href="mailto:ruihanhansonsu@gmail.com">ruihanhansonsu@gmail.com</a>
+          <a href="https://github.com/MichaelSou1">GitHub</a>
+        </p>
+      </div>
+
+      <figure style="margin:0">
+        <div class="patches" id="patches" role="img" aria-label="Photo of Ruihan Su"></div>
+      </figure>
+    </div>
+
+    <section aria-labelledby="news-h">
+      <div class="row">
+        <h3 id="news-h"><span lang="en">News</span><span lang="zh">动态</span></h3>
+        <div>
+          <ul class="news">
+            <li><time datetime="2026-11">2026.11</time>
+              <span lang="en"><a href="#instride">InStride</a>, on efficient recovery for GUI agents, is under review.</span>
+              <span lang="zh"><a href="#instride">InStride</a>（GUI Agent 干扰下的高效恢复）投稿，审稿中。</span></li>
+            <li><time datetime="2026-09">2026.09</time>
+              <span lang="en"><a href="#pave">PAVE</a>, on physics-aware video representations, is under review.</span>
+              <span lang="zh"><a href="#pave">PAVE</a>（物理感知视频表征）投稿，审稿中。</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" aria-labelledby="research-h">
+      <h2 id="research-h"><span lang="en">Research</span><span lang="zh">研究</span></h2>
+
+      <div class="row" id="mu">
+        <h3><span lang="en">Multimodal Understanding</span><span lang="zh">多模态理解</span></h3>
+        <div>
+          <article class="paper">
+            <h4>Multimodal J-Lens: Reading Visual Facts out of VLM Hidden States</h4>
+            <p class="by"><span lang="en">Ongoing</span><span lang="zh">进行中</span></p>
+            <p lang="en">It is hard to tell where inside a vision-language model a visual fact is formed, and whether later layers actually rely on it. We extend Jacobian-based lenses to the multimodal setting: fitting separate visual and textual average-Jacobian maps lets us decode intermediate hidden states of a VLM into vocabulary-level visual facts, such as colors and spatial relations. We then use targeted interventions to test whether these decoded directions are causally used downstream.</p>
+            <p lang="zh">我们很难判断 VLM 在网络的哪一层形成了某个视觉事实，以及后续层是否真的依赖它。我们把基于 Jacobian 的 lens 扩展到多模态：分别拟合视觉与文本两份平均 Jacobian 映射，把 VLM 中间层的隐状态解码成词表层面的视觉事实（如颜色、空间关系），再用定向干预检验这些读出方向是否被下游因果地使用。</p>
+            <ul class="results">
+              <li lang="en">GQA spatial-relation readout: <b>45.3%</b>, vs. <b>33.9%</b> for the official J++ Lens.</li>
+              <li lang="zh">GQA 空间关系读出：<b>45.3%</b>，官方 J++ Lens 为 <b>33.9%</b>。</li>
+              <li lang="en">On Qwen3.5-9B, fitting on mixed image–text data raises recall@10 by <b>+4.7 pp</b> (95% CI [+3.5, +5.9]) over text-only fitting.</li>
+              <li lang="zh">在 Qwen3.5-9B 上，图文混合拟合比纯文本拟合的 recall@10 高 <b>4.7pp</b>（95% CI [+3.5, +5.9]）。</li>
+            </ul>
+          </article>
+
+          <article class="paper brief">
+            <h4>Reading, Not Reasoning</h4>
+            <p class="by"><span lang="en">Technical report</span><span lang="zh">技术报告</span></p>
+            <p lang="en">A causal-intervention audit of chain-of-thought in distilled VLMs. When we corrupt intermediate steps in the emitted chain, the model mostly snaps back to its original answer: the chain is not causally used, and the model is reading the image rather than reasoning through its chain.</p>
+            <p lang="zh">用因果干预审计蒸馏后 VLM 的思维链。篡改链中的中间步骤后，模型大多仍回到原答案：思维链并未被因果地使用，模型是在读图，而不是沿着思维链推理。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="row" id="agentic">
+        <h3><span lang="en">Agentic Post-training</span><span lang="zh">智能体后训练</span></h3>
+        <div>
+          <article class="paper" id="instride">
+            <h4>InStride: Learning Efficient Recovery for GUI Agents under Disruptions</h4>
+            <p class="by"><b>Ruihan Su</b>, et al. <em>Under review.</em></p>
+            <p lang="en">GUI agents are mostly trained on clean, successful trajectories, so when a pop-up appears, a click silently fails, or a page loads slowly, they tend to repeat useless actions and lose track of the task. InStride teaches agents to recover. We inject disruptions into clean trajectories and replay them to build verified recovery demonstrations for SFT warm-up, then run online RL (GSPO) with a reward that adds an efficiency bonus when the agent recovers in no more steps than a feasible reference.</p>
+            <p lang="zh">GUI Agent 大多在干净的成功轨迹上训练，遇到弹窗、点击无效、页面延迟时，常会重复无效操作并丢失原任务。InStride 教 Agent 高效恢复：在干净的成功轨迹中注入干扰并回放，构造经过验证的恢复示范用于 SFT 冷启动；再做在线强化学习（GSPO），对恢复步数不超过可行参考解的成功轨迹给予额外的效率奖励。</p>
+            <ul class="results">
+              <li lang="en">BreakingWeb with disruptions: task success <b>15.1% → 25.3%</b> over the Qwen3.5-9B base.</li>
+              <li lang="zh">BreakingWeb 干扰场景：任务成功率 <b>15.1% → 25.3%</b>（相对 Qwen3.5-9B 基座）。</li>
+              <li lang="en">OSWorld with noise: task success <b>20.9% → 32.3%</b>.</li>
+              <li lang="zh">OSWorld 噪声场景：任务成功率 <b>20.9% → 32.3%</b>。</li>
+              <li lang="en">Average recovery decisions on BreakingWeb: <b>6.96 → 3.10</b>.</li>
+              <li lang="zh">BreakingWeb 平均恢复决策数：<b>6.96 → 3.10</b>。</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="row" id="wm">
+        <h3><span lang="en">World Model</span><span lang="zh">世界模型</span></h3>
+        <div>
+          <article class="paper" id="pave">
+            <h4>PAVE: Learning Physics-Aware Visual Representations from Videos</h4>
+            <p class="by"><b>Ruihan Su</b>*, et al. <em>Under review.</em> <span lang="en">*Equal contribution.</span><span lang="zh">*共同一作。</span></p>
+            <p lang="en">General-purpose video encoders are good at recognizing what is in a scene, but often miss how things move and interact. PAVE learns physics-aware visual representations directly from video. A causal video encoder with sparse Mixture-of-Experts layers is first pre-trained to predict future features, so that different experts specialize in different physical cues; it is then aligned with physical knowledge through physics QA supervision and a Baseline-Adjusted Cross-Entropy (BACE) objective.</p>
+            <p lang="zh">通用视频编码器擅长识别画面里“有什么”，却常常忽略物体“如何运动、如何相互作用”。PAVE 直接从视频中学习物理感知的视觉表征：先用带稀疏 MoE 的因果视频编码器预测未来特征，让不同专家分别捕获不同类型的物理线索；再通过物理问答监督与基线校正交叉熵（BACE）进行物理知识对齐。</p>
+            <ul class="results">
+              <li lang="en">With <b>105M</b> activated parameters: PhysBench <b>70.04%</b> (+2.01 pp) and MVBench <b>58.93%</b> (+3.08 pp) over the strongest baseline encoders.</li>
+              <li lang="zh">仅 <b>105M</b> 激活参数：PhysBench <b>70.04%</b>（+2.01pp）、MVBench <b>58.93%</b>（+3.08pp），均超过最强基线编码器。</li>
+              <li lang="en">Transfers downstream: <b>+9.7</b> on VideoPhy semantic adherence, <b>+6.4</b> on VSI-Bench, and <b>+3.2</b> average success on five RoboTwin 2.0 manipulation tasks.</li>
+              <li lang="zh">下游迁移：VideoPhy 语义一致性 <b>+9.7</b>，VSI-Bench <b>+6.4</b>，RoboTwin 2.0 五个操作任务平均成功率 <b>+3.2</b>。</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="exp-h">
+      <h2 id="exp-h"><span lang="en">Experience</span><span lang="zh">实习经历</span></h2>
+
+      <div class="row job">
+        <h3>Kuaishou<small><span lang="en">Multimodal foundation model team, research intern</span><span lang="zh">快手 · 多模态基座模型 · 研究实习生</span></small></h3>
+        <div>
+          <p class="what" lang="en">Built a self-improving data loop for a multimodal foundation model: diagnosing capability gaps from benchmark failures, then automatically designing new training tasks and synthesizing verified training data to close them.</p>
+          <p class="what" lang="zh">为多模态基座模型搭建“能力自进化”的数据闭环：从评测失分中诊断能力短板，自动设计新的训练任务并合成经过质检的训练数据来补齐。</p>
+          <ul lang="en">
+            <li><b>Weakness-driven task design.</b> Turned benchmark failures into structured capability gaps, then generated new training tasks from in-house multimodal assets, de-duplicated against existing tasks.</li>
+            <li><b>Data synthesis and quality control.</b> Produced queries at scale, distilled chain-of-thought answers from a teacher model, and filtered them for answer–reasoning consistency, reasoning validity, and visual grounding; labeled each sample's value by how the student model performs on it. Led the production of tens of millions of training samples.</li>
+            <li><b>Training experiments.</b> Compared task mixtures and data cleaning strategies on in-domain and general abilities.</li>
+          </ul>
+          <ul lang="zh">
+            <li><b>弱点驱动的任务设计。</b>把评测失分归纳成结构化的能力短板，基于站内多模态素材生成新的训练任务，并与已有任务去重。</li>
+            <li><b>数据合成与质检。</b>批量生产问题，用教师模型生成带思维链的回答，从作答与推理一致性、推理有效性、视觉依据三个维度质检，并按学生模型的作答情况为样本标注价值。合计主导产出千万条训练数据。</li>
+            <li><b>训练实验。</b>比较不同任务组合与数据清洗策略对域内与通用能力的影响。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row job">
+        <h3>Meituan<small><span lang="en">LLM application team, algorithm intern</span><span lang="zh">美团 · 大模型应用算法 · 算法实习生</span></small></h3>
+        <div>
+          <p class="what" lang="en">Designed a multi-agent system that automatically rewrites large, multi-layer SQL codebases, with a self-improving harness and independent verification to curb hallucination.</p>
+          <p class="what" lang="zh">设计用于大规模、多层 SQL 代码库自动改写的 multi-agent 系统，通过独立核验与可自我改进的 harness 抑制模型幻觉。</p>
+          <ul lang="en">
+            <li><b>Context management.</b> Split the task into atomic sub-tasks, each handled by a sub-agent that sees only the context it needs, keeping the model focused on goals and contracts.</li>
+            <li><b>Voting and independent verification.</b> Ran multiple agents in parallel and voted across their answers; used an evaluator model different from the generator to reduce self-evaluation bias.</li>
+            <li><b>Self-improving harness.</b> On mismatched query results, the system traced logs and intermediate tables to locate the faulty layer, proposed fixes to prompts or tools, and merged them only if a regression gate passed.</li>
+          </ul>
+          <ul lang="zh">
+            <li><b>上下文管理。</b>把任务拆成原子子任务，每个子代理只看到必要的上下文，让模型聚焦于当前目标与契约。</li>
+            <li><b>选举与独立核验。</b>多代理并行作答后选举，并用不同于生成模型的评估模型核验，降低评估偏差。</li>
+            <li><b>Harness 自我改进。</b>取数结果不一致时自动定位出错的加工层，提出提示词或工具的修改，通过回归评测门控后才合入。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row job">
+        <h3>Tele AI<small><span lang="en">Visual understanding, algorithm intern</span><span lang="zh">中电信人工智能公司 · 视觉理解算法</span></small></h3>
+        <div>
+          <p class="what" lang="en">Designed Slot-Parallel Generative Perception, a multi-instance perception architecture that predicts instances in parallel slots, each refined coarse-to-fine, avoiding the spurious ordering and duplicates of serial autoregressive decoding.</p>
+          <p class="what" lang="zh">设计 Slot-Parallel Generative Perception：多实例感知时各实例在并行的 slot 中预测，slot 内由粗到细自回归，避免串行自回归带来的伪顺序依赖与重复预测。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="honors" aria-labelledby="honors-h">
+      <div class="row">
+        <h3 id="honors-h"><span lang="en">Honors</span><span lang="zh">竞赛与荣誉</span></h3>
+        <div>
+          <ul class="honors">
+            <li lang="en"><b>Second Prize, National Final</b>, The Chinese Mathematics Competitions (CMC)
+              <span>First Prize in the regional round, ranked 7th of 15,842</span></li>
+            <li lang="zh"><b>全国大学生数学竞赛 全国决赛二等奖</b>
+              <span>预赛一等奖，赛区排名 7 / 15,842</span></li>
+            <li lang="en"><b>Provincial Second Prize</b>, China Undergraduate Mathematical Contest in Modeling (CUMCM)
+              <span>Top 15%</span></li>
+            <li lang="zh"><b>全国大学生数学建模竞赛 省级二等奖</b>
+              <span>前 15%</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="beyond-h">
+      <div class="row">
+        <h3 id="beyond-h"><span lang="en">Beyond research</span><span lang="zh">研究之外</span></h3>
+        <div class="beyond">
+          <div>
+            <p lang="en">Outside research, I enjoy working out, watching TV series, and karaoke.</p>
+            <p lang="zh">课余时间我喜欢健身，也爱看美剧、唱 K。</p>
+            <dl>
+              <dt lang="en">Chinese</dt><dd lang="en">Native</dd>
+              <dt lang="zh">中文</dt><dd lang="zh">母语</dd>
+              <dt lang="en">English</dt><dd lang="en">CET-6, 651 / 710</dd>
+              <dt lang="zh">英语</dt><dd lang="zh">大学英语六级 651 / 710</dd>
+            </dl>
+          </div>
+          <figure>
+            <img src="images/fitness.webp" width="1080" height="1080" loading="lazy"
+                 alt="Ruihan Su flexing in a gym mirror, seen from behind">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h"><span lang="en">Contact</span><span lang="zh">联系我</span></h2>
+      <p lang="en">I am open to Ph.D. opportunities, research collaborations, and technical discussions. Email is the fastest way to reach me.</p>
+      <p lang="zh">欢迎博士项目、科研合作与技术交流方面的联系，邮件是最快的方式。</p>
+      <a class="mail" href="mailto:ruihanhansonsu@gmail.com">ruihanhansonsu@gmail.com</a>
+      <p class="more"><a href="https://github.com/MichaelSou1">github.com/MichaelSou1</a></p>
+    </section>
+  </main>
+
+  <footer>© 2026 <span lang="en">Ruihan Su</span><span lang="zh">苏瑞涵</span></footer>
+</div>
+
+<script>
+  // Build the patch-grid avatar.
+  (function () {
+    var box = document.getElementById('patches');
+    var n = 6, frag = document.createDocumentFragment();
+    for (var r = 0; r < n; r++) {
+      for (var c = 0; c < n; c++) {
+        var s = document.createElement('span');
+        s.style.setProperty('--i', r * n + c);
+        s.style.backgroundPosition = (c / (n - 1) * 100) + '% ' + (r / (n - 1) * 100) + '%';
+        frag.appendChild(s);
+      }
+    }
+    box.appendChild(frag);
+  })();
+
+  // Language toggle.
+  document.getElementById('lang').addEventListener('click', function () {
+    var root = document.documentElement;
+    var next = root.getAttribute('data-lang') === 'zh' ? 'en' : 'zh';
+    root.setAttribute('data-lang', next);
+    root.lang = next === 'zh' ? 'zh-CN' : 'en';
+    try { localStorage.setItem('lang', next); } catch (e) {}
+  });
 </script>
 </body>
 </html>
